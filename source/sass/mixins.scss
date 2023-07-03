@@ -76,6 +76,10 @@
   font-size: 16px;
   font-weight: 300;
   line-height: 140%;
+
+  @include vp-1200 {
+    line-height: 150%;
+  }
 }
 
 @mixin small-text {

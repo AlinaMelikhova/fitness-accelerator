@@ -17,6 +17,8 @@ $color-torch-red: #ff1553;
 
 // Gradient
 
+$gradient-primary: linear-gradient(to right, #ed0233 0%, #003eb7 100%);
+
 $black-to-right: linear-gradient(
   90deg,
   rgba(0, 0, 0, 0.75) 0%,
