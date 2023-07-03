@@ -1500,6 +1500,61 @@ button,
   }
 }
 
+.about__container {
+  background-color: #ffffff;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.about__description {
+  padding-top: 49px;
+}
+
+.about__title {
+  color: #102654;
+  font-size: 48px;
+  font-family: "Alumni Sans", "Arial", sans-serif;
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: 1.44px;
+  margin-bottom: 25px;
+}
+
+.about__title-descripton {
+  color: #102654;
+  font-size: 18px;
+  font-family: "Roboto Condenced", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 150%;
+  display: inline-block;
+  margin-bottom: 55px;
+}
+
+.about__descripton {
+  font-family: "Roboto Condenced", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 140%;
+  color: #102654;
+  max-width: 355px;
+}
+
+.about__multimedia-container {
+  position: relative;
+  margin-left: 85px;
+}
+
+.about__multimedia-video {
+  width: 364px;
+  height: 228px;
+  position: absolute;
+  left: -63px;
+  bottom: -25px;
+}
+
 .footer__container {
   display: -webkit-box;
   display: -ms-flexbox;
