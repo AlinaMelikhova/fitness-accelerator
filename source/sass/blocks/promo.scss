@@ -145,6 +145,7 @@
   font-weight: 700;
   letter-spacing: 0.7px;
   text-transform: uppercase;
+  cursor: pointer;
 
   &:focus:not(:disabled) {
     padding: 10px;
@@ -172,6 +173,7 @@
 
   &:disabled {
     opacity: 0.5;
+    cursor: auto;
   }
 }
 
