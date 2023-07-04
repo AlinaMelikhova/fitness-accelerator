@@ -297,9 +297,15 @@
                       <span class="events__card-heading-item-description"
                         >Дата</span
                       >
-                      <span class="events__card-heading-item-number"
-                        >12:00</span
-                      >
+                      <span class="events__card-heading-item-number">7</span>
+                      <div class="events__card-heading-item-date">
+                        <span class="events__card-heading-item-date-description"
+                          >Марта</span
+                        >
+                        <span class="events__card-heading-item-date-description"
+                          >2019</span
+                        >
+                      </div>
                     </li>
                     <li class="events__card-heading-item">
                       <span class="events__card-heading-item-description"
@@ -315,13 +321,52 @@
                   Ежегодные соревнования по CrossFit
                 </p>
                 <button
-                  class="events__card-description-button button-buy"
+                  class="events__card-description-button button-dark-background"
                   type="button"
                 >
                   заполнить заявку
                 </button>
               </div>
-              <div class="events__card-image">Here will be a photo</div>
+              <div class="events__card-image">
+                <picture>
+                  <!-- <source
+                    type="image/webp"
+                    media="(min-width: 1200px)"
+                    srcset="img/events-photo.webp 1x, img/events-photo@2x.webp 2x"
+                  /> -->
+                  <!--
+                  <source
+                    type="image/webp"
+                    media="(max-width: 1199px)"
+                    srcset="
+                      events-photo-tab.webp    1x,
+                      events-photo-tab@2x.webp 2x
+                    "
+                  /> -->
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      img/events-photo-mob.jpg    1x,
+                      img/events-photo-mob@2x.jpg 2x
+                    "
+                  />
+                  <source
+                    media="(max-width: 1199px)"
+                    srcset="
+                      img/events-photo-tab.jpg    1x,
+                      img/events-photo-tab@2x.jpg 2x
+                    "
+                  />
+                  <img
+                    class="events__image"
+                    src="img/events-photo.jpg"
+                    alt="Фотография мужчины."
+                    width="660"
+                    height="500"
+                    srcset="img/events-photo@2x.jpg 2x"
+                  />
+                </picture>
+              </div>
             </div>
           </div>
         </section>
@@ -430,87 +475,72 @@
             <div class="benefits__list-container">
               <ul class="benefits__list">
                 <li class="benefits__item">
-                  <div class="benefits__item-container">
-                    <div class="benefits__item-number-container">
-                      <span class="benefits__item-number">900</span>
-                      <span class="benefits__item-number-description"
-                        >кв/м</span
-                      >
-                    </div>
-                    <div class="benefits__item-description-container">
-                      <span class="benefits__item-description-title"
-                        >Площадь</span
-                      >
-                      <span class="benefits__item-description"
-                        >Занимайтесь без очередей и&nbsp;толпучки</span
-                      >
-                    </div>
+                  <div class="benefits__item-number-container">
+                    <span class="benefits__item-number">900</span>
+                    <span class="benefits__item-number-description">кв/м</span>
+                  </div>
+                  <div class="benefits__item-description-container">
+                    <span class="benefits__item-description-title"
+                      >Площадь</span
+                    >
+                    <span class="benefits__item-description"
+                      >Занимайтесь без очередей и&nbsp;толпучки</span
+                    >
                   </div>
                 </li>
                 <li class="benefits__item">
-                  <div class="benefits__item-container">
-                    <div class="benefits__item-number-container">
-                      <span class="benefits__item-number">350</span>
-                      <span class="benefits__item-number-description"
-                        >мест</span
-                      >
-                    </div>
-                    <div class="benefits__item-description-container">
-                      <span class="benefits__item-description-title"
-                        >Комфорт</span
-                      >
-                      <span class="benefits__item-description"
-                        >Просторные раздевалки, душевые, фен, Wi-Fi,
-                        кулеры</span
-                      >
-                    </div>
+                  <div class="benefits__item-number-container">
+                    <span class="benefits__item-number">70</span>
+                    <span class="benefits__item-number-description">машин</span>
+                  </div>
+                  <div class="benefits__item-description-container">
+                    <span class="benefits__item-description-title"
+                      >Собственная парковка</span
+                    >
+                    <span class="benefits__item-description"
+                      >Вы&nbsp;всегда найдете место для своей машины
+                      на&nbsp;нашей парковке</span
+                    >
                   </div>
                 </li>
-              </ul>
-              <div class="benefits__main-card">
-                <span class="benefits__main-card-number">100</span>
-                <span class="benefits__main-card-number-description"
-                  >Тренажеров</span
-                >
-                <p class="benefits__main-card-description">
-                  Современные тренажеры на&nbsp;все группы мышц
-                </p>
-              </div>
-              <ul class="benefits__list">
-                <li class="benefits__item">
-                  <div class="benefits__item-container">
-                    <div class="benefits__item-number-container">
-                      <span class="benefits__item-number">70</span>
-                      <span class="benefits__item-number-description"
-                        >машин</span
-                      >
-                    </div>
-                    <div class="benefits__item-description-container">
-                      <span class="benefits__item-description-title"
-                        >Собственная парковка</span
-                      >
-                      <span class="benefits__item-description"
-                        >Вы&nbsp;всегда найдете место для своей машины
-                        на&nbsp;нашей парковке</span
-                      >
-                    </div>
+                <li class="benefits__item--central">
+                  <div class="benefits__central-card">
+                    <span class="benefits__central-card-number">100</span>
+                    <span class="benefits__central-card-number-description"
+                      >Тренажеров</span
+                    >
+                    <p class="benefits__central-card-description">
+                      Современные тренажеры на&nbsp;все группы мышц
+                    </p>
                   </div>
                 </li>
                 <li class="benefits__item">
-                  <div class="benefits__item-container">
-                    <div class="benefits__item-number-container">
-                      <span class="benefits__item-number">5+</span>
-                      <span class="benefits__item-number-description">лет</span>
-                    </div>
-                    <div class="benefits__item-description-container">
-                      <span class="benefits__item-description-title"
-                        >Тренерский опыт</span
-                      >
-                      <span class="benefits__item-description"
-                        >Добивайтесь своих целей быстрее с&nbsp;профессиональным
-                        тренером</span
-                      >
-                    </div>
+                  <div class="benefits__item-number-container">
+                    <span class="benefits__item-number">350</span>
+                    <span class="benefits__item-number-description">мест</span>
+                  </div>
+                  <div class="benefits__item-description-container">
+                    <span class="benefits__item-description-title"
+                      >Комфорт</span
+                    >
+                    <span class="benefits__item-description"
+                      >Просторные раздевалки, душевые, фен, Wi-Fi, кулеры</span
+                    >
+                  </div>
+                </li>
+                <li class="benefits__item">
+                  <div class="benefits__item-number-container">
+                    <span class="benefits__item-number">5+</span>
+                    <span class="benefits__item-number-description">лет</span>
+                  </div>
+                  <div class="benefits__item-description-container">
+                    <span class="benefits__item-description-title"
+                      >Тренерский опыт</span
+                    >
+                    <span class="benefits__item-description"
+                      >Добивайтесь своих целей быстрее с&nbsp;профессиональным
+                      тренером</span
+                    >
                   </div>
                 </li>
               </ul>
@@ -519,33 +549,101 @@
         </section>
         <section class="promo">
           <div class="promo__container container">
-            <div class="promo__card">
-              <div class="promo__card-description-container">
-                <span class="promo__card-price-description">Год</span>
-                <span class="promo__card-price">4999</span>
-                <span class="promo__card-description"
-                  >Безлимитный абонемент в&nbsp;тренажерный зал</span
-                >
-                <a class="promo__card-description" href="#">подробнее</a>
+            <h2 class="promo__title">Акции</h2>
+            <div class="promo__list-container">
+              <div class="promo__card">
+                <div class="promo__card-description-container">
+                  <span class="promo__card-price-description">Год</span>
+                  <span class="promo__card-price">4999</span>
+                  <span class="promo__card-description"
+                    >Безлимитный абонемент в&nbsp;тренажерный зал</span
+                  >
+                  <form
+                    class="promo__card-button-container"
+                    action="#"
+                    target="_blank"
+                  >
+                    <button class="promo__card-button">подробнее</button>
+                  </form>
+                </div>
+                <div class="promo__card-image-container">
+                  <picture>
+                    <!-- <source
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                      srcset="img/promo-photo.webp 1x, img/promo-photo@2x.webp 2x"
+                    /> -->
+                    <!--
+                    <source
+                      type="image/webp"
+                      media="(max-width: 1199px)"
+                      srcset="
+                        promo-photo-tab.webp    1x,
+                        promo-photo-tab@2x.webp 2x
+                      "
+                    /> -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        img/promo-photo-mob.jpg    1x,
+                        img/promo-photo-mob@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 1199px)"
+                      srcset="
+                        img/promo-photo-tab.jpg    1x,
+                        img/promo-photo-tab@2x.jpg 2x
+                      "
+                    />
+                    <img
+                      class="promo__image"
+                      src="img/promo-photo.jpg"
+                      alt="Фотография женщины."
+                      width="280"
+                      height="462"
+                      srcset="img/promo-photo@2x.jpg 2x"
+                    />
+                  </picture>
+                </div>
               </div>
-              <div class="promo__card-image-container"></div>
+              <ul class="promo__list">
+                <li class="promo__item">
+                  <h4 class="promo__item-title">Месяц бесплатно</h4>
+                  <p class="promo__item-description">
+                    Приведи друга, получи абонемент в&nbsp;подарок
+                  </p>
+                  <form
+                    class="promo__card-button-container"
+                    action="#"
+                    target="_blank"
+                  >
+                    <button
+                      class="promo__card-button promo__card-button--on-light-bg"
+                    >
+                      подробнее
+                    </button>
+                  </form>
+                </li>
+                <li class="promo__item">
+                  <h4 class="promo__item-title">Скидка 20%</h4>
+                  <p class="promo__item-description">
+                    Корпоративный фитнес с&nbsp;командой
+                  </p>
+                  <form
+                    class="promo__card-button-container"
+                    action="#"
+                    target="_blank"
+                  >
+                    <button
+                      class="promo__card-button promo__card-button--on-light-bg"
+                    >
+                      подробнее
+                    </button>
+                  </form>
+                </li>
+              </ul>
             </div>
-            <ul class="promo__list">
-              <li class="promo__item">
-                <h4 class="promo__item-title">Месяц бесплатно</h4>
-                <p class="promo__item-description">
-                  Приведи друга, получи абонемент в&nbsp;подарок
-                </p>
-                <a class="promo__card-description" href="#">подробнее</a>
-              </li>
-              <li class="promo__item">
-                <h4 class="promo__item-title">Скидка 20%</h4>
-                <p class="promo__item-description">
-                  Корпоративный фитнес с&nbsp;командой
-                </p>
-                <a class="promo__card-description" href="#">подробнее</a>
-              </li>
-            </ul>
           </div>
         </section>
         <section class="faq">
