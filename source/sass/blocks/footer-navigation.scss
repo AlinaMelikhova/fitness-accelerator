@@ -21,7 +21,10 @@
 }
 
 .footer-navigation__logo {
+  margin-top: 10px;
+
   @include vp-767 {
+    margin-top: 0;
     position: absolute;
     top: 50px;
     left: 15px;

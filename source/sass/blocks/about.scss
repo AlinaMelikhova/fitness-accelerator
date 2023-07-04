@@ -18,7 +18,8 @@
 }
 
 .about__description-container {
-  padding-top: 49px;
+  padding-top: 45px;
+  padding-left: 60px;
 
   @include vp-1200 {
     padding: 0 82px;
@@ -40,7 +41,7 @@
   font-weight: 600;
   line-height: 100%;
   letter-spacing: 1.44px;
-  margin-bottom: 25px;
+  margin-bottom: 12px;
 
   @include vp-1200 {
     margin-bottom: 3px;
@@ -61,15 +62,15 @@
 
 .about__title-descripton {
   color: $color-primary;
-  text-align: center;
   font-size: 18px;
   font-family: $font-family-secondary;
   font-weight: 400;
   line-height: 150%;
   display: block;
-  margin-bottom: 55px;
+  margin-bottom: 39px;
 
   @include vp-1200 {
+    text-align: center;
     margin-bottom: 34px;
   }
 
@@ -141,7 +142,7 @@
   height: 228px;
   position: absolute;
   left: -63px;
-  bottom: -25px;
+  bottom: -116px;
 
   @include vp-1200 {
     left: calc(50% - 133px);

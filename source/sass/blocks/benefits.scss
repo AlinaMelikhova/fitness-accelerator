@@ -1,6 +1,6 @@
 .benefits__container {
   background-color: $color-section;
-  padding: 116px 180px;
+  padding: 111px 163px 116px;
 
   @include vp-1200 {
     padding: 90px 45px 94px;
@@ -13,7 +13,7 @@
 
 .benefits__title {
   margin: 0;
-  margin-bottom: 56px;
+  margin-bottom: 44px;
   padding: 0;
   text-align: center;
   @include section-title;
@@ -48,7 +48,7 @@
 
 .benefits__item {
   display: flex;
-  padding-bottom: 84px;
+  padding-bottom: 76px;
   border-bottom: 2px solid rgba(209, 10, 66, 0.2);
 
   @include vp-1200 {
@@ -71,7 +71,7 @@
   &:last-child {
     border-bottom: none;
     padding-bottom: 0;
-    padding-top: 84px;
+    padding-top: 76px;
 
     @include vp-1200 {
       padding-top: 0;
@@ -80,7 +80,7 @@
 }
 
 .benefits__item-number-container {
-  margin-right: 30px;
+  margin-right: 32px;
   display: flex;
   flex-direction: column;
 
@@ -97,7 +97,7 @@
   font-size: 71px;
   font-family: $font-family-secondary;
   font-weight: 700;
-  line-height: 100%;
+  line-height: 80%;
   background-color: $color-neon-blue;
   background-image: $gradient-primary;
   -webkit-background-clip: text;
@@ -131,11 +131,12 @@
   font-size: 22px;
   font-family: $font-family-secondary;
   font-weight: 700;
-  line-height: 150%;
-  margin-bottom: 15px;
+  line-height: 100%;
+  margin-bottom: 10px;
 
   @include vp-1200 {
     text-align: center;
+    margin-bottom: 15px;
   }
 
   @include vp-767 {
@@ -176,7 +177,7 @@
   background-color: #1c3374;
   color: $color-default-white;
   text-align: center;
-  padding: 66px 34px;
+  padding: 55px 34px 61px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -207,7 +208,7 @@
   font-family: $font-family-secondary;
   font-weight: 700;
   line-height: 150%;
-  margin-bottom: 93px;
+  margin-bottom: auto;
 
   @include vp-1200 {
     font-size: 22px;

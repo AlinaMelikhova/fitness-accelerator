@@ -9,13 +9,13 @@
 .trial__container {
   background-color: $color-primary;
   color: $color-default-white;
-  padding: 56px 170px 72px 103px;
+  padding: 56px 170px 69px 103px;
   min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 
   @include vp-1200 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     padding: 60px 163px 70px 133px;
     min-height: auto;
   }
@@ -29,7 +29,7 @@
   @include section-title;
   padding: 0;
   margin: 0;
-  margin-bottom: 24px;
+  margin-bottom: 17px;
 
   @include vp-1200 {
     margin-bottom: 32px;
@@ -53,7 +53,7 @@
   }
 
   label {
-    width: 44%;
+    width: 46%;
 
     @include vp-767 {
       width: 100%;
