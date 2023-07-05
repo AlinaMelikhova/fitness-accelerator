@@ -1,0 +1,89 @@
+.catalog-card__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 61px 70px;
+  box-sizing: border-box;
+  background-color: $color-default-white;
+  border: 7px solid $color-default-white;
+  min-height: 448px;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    border-image: $gradient-primary;
+    border-image-slice: 1;
+  }
+
+  &:hover .catalog-card__button:not(:disabled),
+  &:focus .catalog-card__button:not(:disabled) {
+    outline: none;
+    color: $color-default-white;
+    background: $gradient-primary;
+  }
+}
+
+.catalog-card__title {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 22px;
+  color: $color-primary;
+  font-size: 26px;
+  font-family: $font-family-secondary;
+  font-weight: 700;
+  line-height: 152%;
+}
+
+.catalog-card__title-description {
+  color: #495a7d;
+  font-size: 16px;
+  font-family: $font-family-secondary;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  margin-bottom: 40px;
+}
+
+.catalog-card__price-container {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+  margin-bottom: auto;
+  position: relative;
+}
+
+.catalog-card__price-number {
+  color: #103aae;
+  font-size: 60px;
+  font-family: $font-family-secondary;
+  font-weight: 700;
+  line-height: 100%;
+  margin-right: 14px;
+  z-index: 1;
+
+  &--shadow {
+    position: absolute;
+    top: -40px;
+    left: -19px;
+    color: #e8e8e8;
+    font-size: 100px;
+    font-family: $font-family-secondary;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    opacity: 0.5;
+    z-index: 0;
+  }
+}
+
+.catalog-card__price-symbol-icon {
+  position: relative;
+  fill: $color-primary;
+  z-index: 1;
+}
+
+.catalog-card__button {
+  padding: 27px 44px;
+}

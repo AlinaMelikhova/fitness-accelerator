@@ -54,3 +54,35 @@
     opacity: 0.5;
   }
 }
+
+.button-light-background {
+  cursor: pointer;
+  margin: 0;
+  background-color: $color-transparent;
+  border: none;
+  outline: 2px solid #1c3374;
+  color: $color-primary;
+  font-size: 12px;
+  line-height: 12px;
+  font-family: $font-family-secondary;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  text-align: center;
+
+  &:hover:not(:disabled),
+  &:focus:not(:disabled) {
+    outline: none;
+    color: $color-default-white;
+    background: $gradient-primary;
+  }
+
+  &:active:not(:disabled) {
+    color: rgba(255, 255, 255, 0.3);
+    background: $gradient-primary;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
+}
