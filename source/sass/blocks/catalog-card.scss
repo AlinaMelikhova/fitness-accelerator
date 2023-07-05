@@ -10,6 +10,15 @@
   border: 7px solid $color-default-white;
   min-height: 448px;
 
+  @include vp-1200 {
+    padding: 58px 110px 62px;
+  }
+
+  @include vp-767 {
+    min-height: 384px;
+    padding: 44px 36px 49px;
+  }
+
   &:hover,
   &:focus {
     outline: none;
@@ -28,12 +37,16 @@
 .catalog-card__title {
   padding: 0;
   margin: 0;
-  margin-bottom: 22px;
+  margin-bottom: 10px;
   color: $color-primary;
   font-size: 26px;
   font-family: $font-family-secondary;
   font-weight: 700;
-  line-height: 152%;
+  line-height: 100%;
+
+  @include vp-767 {
+    font-size: 22px;
+  }
 }
 
 .catalog-card__title-description {
@@ -50,8 +63,13 @@
   display: flex;
   flex-wrap: nowrap;
   align-items: flex-end;
-  margin-bottom: auto;
+  margin-top: auto;
+  margin-bottom: 50px;
   position: relative;
+
+  @include vp-767 {
+    margin-bottom: 44px;
+  }
 }
 
 .catalog-card__price-number {
@@ -62,6 +80,11 @@
   line-height: 100%;
   margin-right: 14px;
   z-index: 1;
+
+  @include vp-767 {
+    font-size: 48px;
+    margin-right: 10px;
+  }
 
   &--shadow {
     position: absolute;
@@ -75,15 +98,25 @@
     line-height: 100%;
     opacity: 0.5;
     z-index: 0;
+
+    @include vp-767 {
+      top: -28px;
+      left: -12px;
+      font-size: 80px;
+    }
   }
 }
 
 .catalog-card__price-symbol-icon {
-  position: relative;
   fill: $color-primary;
   z-index: 1;
+
+  @include vp-767 {
+    width: 28px;
+    height: 35px;
+  }
 }
 
 .catalog-card__button {
-  padding: 27px 44px;
+  padding: 25px 42px;
 }
