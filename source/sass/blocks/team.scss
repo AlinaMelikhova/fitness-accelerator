@@ -1,6 +1,6 @@
 .team__container {
   background-color: $color-default-white;
-  padding-top: 50px;
+  padding-top: 40px;
   padding-bottom: 94px;
 
   @include vp-1200 {
@@ -17,7 +17,7 @@
   padding: 0;
   @include section-title;
   color: $color-primary;
-  margin-bottom: 48px;
+  margin-bottom: 38px;
 
   @include vp-1200 {
     margin-bottom: 29px;

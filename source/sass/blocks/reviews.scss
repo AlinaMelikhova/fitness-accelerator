@@ -1,13 +1,13 @@
 .reviews__container {
   background-color: $color-default-white;
-  padding: 120px 403px;
+  padding: 111px 403px 120px;
 
   @include vp-1200 {
-    padding: 40px 100px 100px;
+    padding: 90px 100px 100px;
   }
 
   @include vp-767 {
-    padding: 42px 47px 70px;
+    padding: 57px 47px 70px;
   }
 }
 
@@ -16,8 +16,16 @@
   margin: 0;
   @include section-title;
   color: $color-primary;
-  margin-bottom: 36px;
+  margin-bottom: 26px;
   text-align: center;
+
+  @include vp-1200 {
+    margin-bottom: 39px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 37px;
+  }
 }
 
 .reviews__card {
@@ -73,7 +81,7 @@
 }
 
 .reviews__card-description-container {
-  padding: 62px 62px 62px 28px;
+  padding: 54px 62px 58px 28px;
 
   @include vp-1200 {
     padding: 56px 65px 57px 28px;

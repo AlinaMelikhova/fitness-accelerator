@@ -1,3 +1,257 @@
 .faq__container {
   background-color: $color-section;
+  padding-top: 110px;
+  padding-bottom: 117px;
+
+  @include vp-1200 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  @include vp-767 {
+    padding-top: 65px;
+    padding-bottom: 70px;
+  }
+}
+
+.faq__title {
+  margin: 0;
+  padding: 0;
+  @include section-title;
+  color: $color-primary;
+  margin-bottom: 29px;
+
+  @include vp-1200 {
+    text-align: center;
+    margin-bottom: 38px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 26px;
+  }
+}
+
+.faq__lists-container {
+  display: flex;
+
+  @include vp-1200 {
+    flex-direction: column;
+  }
+}
+
+.faq__tabs-list {
+  margin: 0;
+  margin-right: 40px;
+  padding: 0;
+  list-style-type: none;
+
+  @include vp-1200 {
+    margin-right: 0;
+    margin-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @include vp-767 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 8px;
+    margin-bottom: 30px;
+  }
+}
+
+.faq__tabs-item {
+  margin-bottom: 10px;
+
+  @include vp-1200 {
+    margin-right: 10px;
+    margin-bottom: 0;
+  }
+
+  @include vp-767 {
+    margin-right: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+
+    @include vp-1200 {
+      margin-right: 0;
+    }
+  }
+}
+
+.faq__tabs-button {
+  font-size: 18px;
+  line-height: 100%;
+  font-weight: 500;
+  padding: 18px;
+  min-width: 260px;
+  outline: 1px solid rgba(16, 38, 84, 0.2);
+  text-transform: none;
+
+  @include vp-1200 {
+    min-width: 162px;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    min-width: 141px;
+    padding: 13px;
+  }
+
+  &--active {
+    color: $color-default-white;
+    background: $gradient-primary;
+  }
+}
+
+.faq__accordeon-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  width: 100%;
+}
+
+.faq__accordeon-item {
+  border-top: 1px solid rgba(28, 51, 116, 0.2);
+  padding: 25px 0;
+
+  @include vp-767 {
+    padding: 20px 0;
+  }
+
+  &:last-child {
+    border-bottom: 1px solid rgba(28, 51, 116, 0.2);
+  }
+}
+
+.faq__accordeon-title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq__accordeon-title {
+  margin: 0;
+  padding: 0;
+  color: $color-primary;
+  font-size: 24px;
+  font-family: $font-family-secondary;
+  font-weight: 500;
+  line-height: 100%;
+
+  @include vp-767 {
+    font-size: 18px;
+    line-height: 118%;
+  }
+}
+
+.faq__accordeon-button {
+  position: relative;
+  background-color: $color-transparent;
+  min-width: 42px;
+  min-height: 42px;
+  border: 1px solid $color-primary;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: $color-primary;
+    width: 1px;
+    height: 18px;
+    top: calc(50% - 9px);
+    left: calc(50% - 0.5px);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: $color-primary;
+    height: 1px;
+    width: 18px;
+    left: calc(50% - 9px);
+    top: calc(50% - 0.5px);
+  }
+
+  @include vp-767 {
+    min-width: 32px;
+    min-height: 32px;
+
+    &::after {
+      width: 1px;
+      height: 12px;
+      top: calc(50% - 6px);
+    }
+
+    &::before {
+      height: 1px;
+      width: 12px;
+      left: calc(50% - 6px);
+    }
+  }
+
+  &:hover:not(:disabled),
+  &:focus:not(:disabled) {
+    background-color: $color-primary;
+    outline: none;
+    &::after,
+    &::before {
+      background-color: $color-default-white;
+    }
+  }
+  &:disabled {
+    opacity: 0.3;
+    cursor: auto;
+  }
+
+  &:active:not(:disabled),
+  &--active {
+    background-color: $color-primary;
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: $color-default-white;
+      height: 1px;
+      width: 18px;
+      left: calc(50% - 9px);
+      top: calc(50% - 0.5px);
+    }
+
+    @include vp-767 {
+      &::after {
+        width: 12px;
+        left: calc(50% - 6px);
+      }
+    }
+  }
+}
+
+.faq__accordeon-description {
+  display: none;
+  margin: 0;
+  margin-top: 8px;
+  padding: 0;
+  padding-right: 162px;
+  color: $color-primary;
+  font-size: 18px;
+  font-family: $font-family-secondary;
+  font-weight: 300;
+  line-height: 140%;
+
+  &--active {
+    display: block;
+  }
+
+  @include vp-1200 {
+    padding-right: 76px;
+  }
+
+  @include vp-767 {
+    margin-top: 12px;
+    font-size: 16px;
+    padding-right: 0;
+  }
 }

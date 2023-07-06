@@ -1,17 +1,17 @@
 .events__container {
   display: flex;
   background-color: $color-default-white;
-  padding-top: 104px;
+  padding-top: 120px;
   padding-bottom: 56px;
 
   @include vp-1200 {
-    padding-top: 83px;
+    padding-top: 100px;
     padding-bottom: 50px;
   }
 
   @include vp-767 {
     flex-direction: column;
-    padding-top: 54px;
+    padding-top: 69px;
     padding-bottom: 35px;
   }
 }
@@ -30,7 +30,7 @@
   padding: 86px 80px;
 
   @include vp-1200 {
-    padding: 51px 47px;
+    padding: 51px 47px 48px;
   }
 
   @include vp-767 {
