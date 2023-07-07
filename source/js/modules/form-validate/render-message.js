@@ -17,6 +17,9 @@ export class Message {
 
   renderMessage(parent, message, state) {
     this.removeMessage(parent);
-    parent.insertAdjacentHTML('beforeend', this._messageTemplate(message, state));
+    parent.insertAdjacentHTML(
+      'beforeend',
+      this._messageTemplate(message, state)
+    );
   }
 }

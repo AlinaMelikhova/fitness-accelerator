@@ -38,8 +38,12 @@ export class Form {
 
   reset(form) {
     form.reset();
-    form.querySelectorAll('.is-invalid').forEach((item) => item.classList.remove('is-invalid'));
-    form.querySelectorAll('.is-valid').forEach((item) => item.classList.remove('is-valid'));
+    form
+      .querySelectorAll('.is-invalid')
+      .forEach((item) => item.classList.remove('is-invalid'));
+    form
+      .querySelectorAll('.is-valid')
+      .forEach((item) => item.classList.remove('is-valid'));
     form.querySelectorAll('.input-message').forEach((item) => item.remove());
     setTimeout(() => {
       this._resetSelects(form);
@@ -62,9 +66,14 @@ export class Form {
     if (this.validateForm(event.target) && callback) {
       this._callbacks[callback].successCallback(event);
       if (this._callbacks[callback].reset) {
-        setTimeout(() => {
-          this.reset(event.target);
-        }, this._callbacks[callback].resetTimeout ? this._callbacks[callback].resetTimeout : 500);
+        setTimeout(
+          () => {
+            this.reset(event.target);
+          },
+          this._callbacks[callback].resetTimeout
+            ? this._callbacks[callback].resetTimeout
+            : 500
+        );
       }
       return;
     }

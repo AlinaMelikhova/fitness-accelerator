@@ -60,12 +60,14 @@
                   Фитнес<br />центр
                 </h1>
               </div>
-              <button
-                class="page-header__description-button button-dark-background"
-                type="button"
-              >
-                купить абонемент
-              </button>
+              <form action="#subscription" target="_self">
+                <button
+                  class="page-header__description-button button-dark-background"
+                  type="submit"
+                >
+                  купить абонемент
+                </button>
+              </form>
             </div>
             <div class="page-header__image-container">
               <picture>
@@ -223,7 +225,7 @@
             </div>
           </div>
         </section>
-        <section class="subscription">
+        <section class="subscription" id="subscription">
           <div class="subscription__container container">
             <h3 class="subscription__title">Абонементы</h3>
             <ul class="subscription__pagination">
@@ -275,11 +277,7 @@
                       </svg>
                     </span>
                   </div>
-                  <form
-                    class="catalog-card__card-button-container"
-                    action="#"
-                    target="_blank"
-                  >
+                  <form action="#" target="_self">
                     <button
                       class="catalog-card__button button-light-background"
                       type="button"
@@ -312,11 +310,8 @@
                       </svg>
                     </span>
                   </div>
-                  <form
-                    class="catalog-card__card-button-container"
-                    action="#"
-                    target="_blank"
-                  >
+
+                  <form action="#" target="_self">
                     <button
                       class="catalog-card__button button-light-background"
                       type="button"
@@ -349,11 +344,8 @@
                       </svg>
                     </span>
                   </div>
-                  <form
-                    class="catalog-card__card-button-container"
-                    action="#"
-                    target="_blank"
-                  >
+
+                  <form action="#" target="_self">
                     <button
                       class="catalog-card__button button-light-background"
                       type="button"
@@ -433,12 +425,15 @@
                 <p class="events__card-description">
                   Ежегодные соревнования по CrossFit
                 </p>
-                <button
-                  class="events__card-description-button button-dark-background"
-                  type="button"
-                >
-                  заполнить заявку
-                </button>
+
+                <form action="#" target="_self">
+                  <button
+                    class="events__card-description-button button-dark-background"
+                    type="button"
+                  >
+                    заполнить заявку
+                  </button>
+                </form>
               </div>
               <div class="events__card-image">
                 <picture>
@@ -695,11 +690,7 @@
                   <span class="promo__card-description"
                     >Безлимитный абонемент в&nbsp;тренажерный зал</span
                   >
-                  <form
-                    class="promo__card-button-container"
-                    action="#"
-                    target="_blank"
-                  >
+                  <form action="#" target="_self">
                     <button class="promo__card-button">подробнее</button>
                   </form>
                 </div>
@@ -750,34 +741,22 @@
                   <p class="promo__item-description">
                     Приведи друга, получи абонемент в&nbsp;подарок
                   </p>
-                  <form
-                    class="promo__card-button-container"
-                    action="#"
-                    target="_blank"
+                  <button
+                    class="promo__card-button promo__card-button--on-light-bg"
                   >
-                    <button
-                      class="promo__card-button promo__card-button--on-light-bg"
-                    >
-                      подробнее
-                    </button>
-                  </form>
+                    подробнее
+                  </button>
                 </li>
                 <li class="promo__item">
                   <h4 class="promo__item-title">Скидка 20%</h4>
                   <p class="promo__item-description">
                     Корпоративный фитнес с&nbsp;командой
                   </p>
-                  <form
-                    class="promo__card-button-container"
-                    action="#"
-                    target="_blank"
+                  <button
+                    class="promo__card-button promo__card-button--on-light-bg"
                   >
-                    <button
-                      class="promo__card-button promo__card-button--on-light-bg"
-                    >
-                      подробнее
-                    </button>
-                  </form>
+                    подробнее
+                  </button>
                 </li>
               </ul>
             </div>
@@ -947,6 +926,7 @@
                 class="trial__form"
                 action="https://echo.htmlacademy.ru/"
                 method="post"
+                data-form-validate
               >
                 <div class="trial__form-input-container">
                   <label for="user-name">

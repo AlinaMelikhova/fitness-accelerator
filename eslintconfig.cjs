@@ -144,7 +144,10 @@ module.exports = {
     semi: 'error',
     'space-in-parens': ['error', 'never'],
     'space-before-blocks': 'error',
-    'space-before-function-paren': ['error', {named: 'never', anonymous: 'always'}],
+    'space-before-function-paren': [
+      'error',
+      {named: 'never', anonymous: 'always'},
+    ],
     'spaced-comment': ['error', 'always'],
     'unicode-bom': 'warn',
     'new-parens': 'error',
