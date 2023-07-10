@@ -232,142 +232,385 @@
         <section class="subscription" id="subscription">
           <div class="subscription__container container">
             <h3 class="subscription__title">Абонементы</h3>
-            <ul class="subscription__pagination">
-              <li
-                class="subscription__pagination-item subscription__pagination-item--first"
-              >
-                <button
-                  class="subscription__pagination-button subscription__pagination-button--active"
+            <div data-tabs="parent">
+              <ul class="subscription__pagination" data-tabs="controls">
+                <li
+                  class="subscription__pagination-item subscription__pagination-item--first"
                 >
-                  1 месяц
-                </button>
-              </li>
-              <li
-                class="subscription__pagination-item subscription__pagination-item--second"
-              >
-                <button class="subscription__pagination-button">
-                  6 месяцев
-                </button>
-              </li>
-              <li
-                class="subscription__pagination-item subscription__pagination-item--third"
-              >
-                <button class="subscription__pagination-button">
-                  12 месяцев
-                </button>
-              </li>
-            </ul>
-            <ul class="subscription__catalog">
-              <li class="subscription__catalog-item catalog-card">
-                <div class="catalog-card__container" tabindex="0">
-                  <h4 class="catalog-card__title">С тренером</h4>
-                  <span class="catalog-card__title-description"
-                    >12 занятий</span
+                  <button
+                    class="subscription__pagination-button subscription__pagination-button is-active"
+                    data-tabs="control"
                   >
-                  <div class="catalog-card__price-container">
-                    <span class="catalog-card__price-number">5000</span>
-                    <span class="catalog-card__price-number--shadow">5000</span>
-                    <span class="catalog-card__price-symbol">
-                      <svg
-                        class="catalog-card__price-symbol-icon"
-                        role="img"
-                        aria-label="ruble."
-                        width="32"
-                        height="48"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 27 34"
-                      >
-                        <use href="./img/sprite.svg#ruble" />
-                      </svg>
-                    </span>
-                  </div>
-                  <form action="#" target="_self">
-                    <button
-                      class="catalog-card__button button-light-background"
-                      type="button"
-                    >
-                      купить абонемент
-                    </button>
-                  </form>
-                </div>
-              </li>
-              <li class="subscription__catalog-item catalog-card">
-                <div class="catalog-card__container" tabindex="0">
-                  <h4 class="catalog-card__title">Дневной</h4>
-                  <span class="catalog-card__title-description"
-                    >с 8:00 до 17:00</span
+                    1 месяц
+                  </button>
+                </li>
+                <li
+                  class="subscription__pagination-item subscription__pagination-item--second"
+                >
+                  <button
+                    class="subscription__pagination-button"
+                    data-tabs="control"
                   >
-                  <div class="catalog-card__price-container">
-                    <span class="catalog-card__price-number">1700</span>
-                    <span class="catalog-card__price-number--shadow">1700</span>
-                    <span class="catalog-card__price-symbol">
-                      <svg
-                        class="catalog-card__price-symbol-icon"
-                        role="img"
-                        aria-label="ruble."
-                        width="32"
-                        height="48"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 27 34"
-                      >
-                        <use href="./img/sprite.svg#ruble" />
-                      </svg>
-                    </span>
-                  </div>
+                    6 месяцев
+                  </button>
+                </li>
+                <li
+                  class="subscription__pagination-item subscription__pagination-item--third"
+                >
+                  <button
+                    class="subscription__pagination-button"
+                    data-tabs="control"
+                  >
+                    12 месяцев
+                  </button>
+                </li>
+              </ul>
+              <div data-tabs="content">
+                <div
+                  class="for-load subscription__tab-wrapper"
+                  data-tabs="element"
+                >
+                  <ul class="subscription__catalog">
+                    <li class="subscription__catalog-item catalog-card">
+                      <div class="catalog-card__container" tabindex="0">
+                        <h4 class="catalog-card__title">С тренером</h4>
+                        <span class="catalog-card__title-description"
+                          >12 занятий</span
+                        >
+                        <div class="catalog-card__price-container">
+                          <span class="catalog-card__price-number">5000</span>
+                          <span class="catalog-card__price-number--shadow"
+                            >5000</span
+                          >
+                          <span class="catalog-card__price-symbol">
+                            <svg
+                              class="catalog-card__price-symbol-icon"
+                              role="img"
+                              aria-label="ruble."
+                              width="32"
+                              height="48"
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 27 34"
+                            >
+                              <use href="./img/sprite.svg#ruble" />
+                            </svg>
+                          </span>
+                        </div>
+                        <form action="#" target="_self">
+                          <button
+                            class="catalog-card__button button-light-background"
+                            type="button"
+                          >
+                            купить абонемент
+                          </button>
+                        </form>
+                      </div>
+                    </li>
+                    <li class="subscription__catalog-item catalog-card">
+                      <div class="catalog-card__container" tabindex="0">
+                        <h4 class="catalog-card__title">Дневной</h4>
+                        <span class="catalog-card__title-description"
+                          >с 8:00 до 17:00</span
+                        >
+                        <div class="catalog-card__price-container">
+                          <span class="catalog-card__price-number">1700</span>
+                          <span class="catalog-card__price-number--shadow"
+                            >1700</span
+                          >
+                          <span class="catalog-card__price-symbol">
+                            <svg
+                              class="catalog-card__price-symbol-icon"
+                              role="img"
+                              aria-label="ruble."
+                              width="32"
+                              height="48"
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 27 34"
+                            >
+                              <use href="./img/sprite.svg#ruble" />
+                            </svg>
+                          </span>
+                        </div>
 
-                  <form action="#" target="_self">
-                    <button
-                      class="catalog-card__button button-light-background"
-                      type="button"
-                    >
-                      купить абонемент
-                    </button>
-                  </form>
-                </div>
-              </li>
-              <li class="subscription__catalog-item catalog-card">
-                <div class="catalog-card__container" tabindex="0">
-                  <h4 class="catalog-card__title">Полный день</h4>
-                  <span class="catalog-card__title-description"
-                    >с 8:00 до 22:00</span
-                  >
-                  <div class="catalog-card__price-container">
-                    <span class="catalog-card__price-number">2700</span>
-                    <span class="catalog-card__price-number--shadow">2700</span>
-                    <span class="catalog-card__price-symbol">
-                      <svg
-                        class="catalog-card__price-symbol-icon"
-                        role="img"
-                        aria-label="ruble."
-                        width="32"
-                        height="48"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 27 34"
-                      >
-                        <use href="./img/sprite.svg#ruble" />
-                      </svg>
-                    </span>
-                  </div>
+                        <form action="#" target="_self">
+                          <button
+                            class="catalog-card__button button-light-background"
+                            type="button"
+                          >
+                            купить абонемент
+                          </button>
+                        </form>
+                      </div>
+                    </li>
+                    <li class="subscription__catalog-item catalog-card">
+                      <div class="catalog-card__container" tabindex="0">
+                        <h4 class="catalog-card__title">Полный день</h4>
+                        <span class="catalog-card__title-description"
+                          >с 8:00 до 22:00</span
+                        >
+                        <div class="catalog-card__price-container">
+                          <span class="catalog-card__price-number">2700</span>
+                          <span class="catalog-card__price-number--shadow"
+                            >2700</span
+                          >
+                          <span class="catalog-card__price-symbol">
+                            <svg
+                              class="catalog-card__price-symbol-icon"
+                              role="img"
+                              aria-label="ruble."
+                              width="32"
+                              height="48"
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 27 34"
+                            >
+                              <use href="./img/sprite.svg#ruble" />
+                            </svg>
+                          </span>
+                        </div>
 
-                  <form action="#" target="_self">
-                    <button
-                      class="catalog-card__button button-light-background"
-                      type="button"
-                    >
-                      купить абонемент
-                    </button>
-                  </form>
+                        <form action="#" target="_self">
+                          <button
+                            class="catalog-card__button button-light-background"
+                            type="button"
+                          >
+                            купить абонемент
+                          </button>
+                        </form>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
-              </li>
-            </ul>
-            <div class="subscription__decoration-image">
-              <picture>
-                <!-- <source
+                <div class="subscription__tab-wrapper" data-tabs="element">
+                  <ul class="subscription__catalog">
+                    <li class="subscription__catalog-item catalog-card">
+                      <div class="catalog-card__container" tabindex="0">
+                        <h4 class="catalog-card__title">С тренером</h4>
+                        <span class="catalog-card__title-description"
+                          >80 занятий</span
+                        >
+                        <div class="catalog-card__price-container">
+                          <span class="catalog-card__price-number">25000</span>
+                          <span class="catalog-card__price-number--shadow"
+                            >25000</span
+                          >
+                          <span class="catalog-card__price-symbol">
+                            <svg
+                              class="catalog-card__price-symbol-icon"
+                              role="img"
+                              aria-label="ruble."
+                              width="32"
+                              height="48"
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 27 34"
+                            >
+                              <use href="./img/sprite.svg#ruble" />
+                            </svg>
+                          </span>
+                        </div>
+                        <form action="#" target="_self">
+                          <button
+                            class="catalog-card__button button-light-background"
+                            type="button"
+                          >
+                            купить абонемент
+                          </button>
+                        </form>
+                      </div>
+                    </li>
+                    <li class="subscription__catalog-item catalog-card">
+                      <div class="catalog-card__container" tabindex="0">
+                        <h4 class="catalog-card__title">Дневной</h4>
+                        <span class="catalog-card__title-description"
+                          >с 8:00 до 17:00</span
+                        >
+                        <div class="catalog-card__price-container">
+                          <span class="catalog-card__price-number">9000</span>
+                          <span class="catalog-card__price-number--shadow"
+                            >9000</span
+                          >
+                          <span class="catalog-card__price-symbol">
+                            <svg
+                              class="catalog-card__price-symbol-icon"
+                              role="img"
+                              aria-label="ruble."
+                              width="32"
+                              height="48"
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 27 34"
+                            >
+                              <use href="./img/sprite.svg#ruble" />
+                            </svg>
+                          </span>
+                        </div>
+
+                        <form action="#" target="_self">
+                          <button
+                            class="catalog-card__button button-light-background"
+                            type="button"
+                          >
+                            купить абонемент
+                          </button>
+                        </form>
+                      </div>
+                    </li>
+                    <li class="subscription__catalog-item catalog-card">
+                      <div class="catalog-card__container" tabindex="0">
+                        <h4 class="catalog-card__title">Полный день</h4>
+                        <span class="catalog-card__title-description"
+                          >с 8:00 до 22:00</span
+                        >
+                        <div class="catalog-card__price-container">
+                          <span class="catalog-card__price-number">10000</span>
+                          <span class="catalog-card__price-number--shadow"
+                            >10000</span
+                          >
+                          <span class="catalog-card__price-symbol">
+                            <svg
+                              class="catalog-card__price-symbol-icon"
+                              role="img"
+                              aria-label="ruble."
+                              width="32"
+                              height="48"
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 27 34"
+                            >
+                              <use href="./img/sprite.svg#ruble" />
+                            </svg>
+                          </span>
+                        </div>
+
+                        <form action="#" target="_self">
+                          <button
+                            class="catalog-card__button button-light-background"
+                            type="button"
+                          >
+                            купить абонемент
+                          </button>
+                        </form>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="subscription__tab-wrapper" data-tabs="element">
+                  <ul class="subscription__catalog">
+                    <li class="subscription__catalog-item catalog-card">
+                      <div class="catalog-card__container" tabindex="0">
+                        <h4 class="catalog-card__title">С тренером</h4>
+                        <span class="catalog-card__title-description"
+                          >200 занятий</span
+                        >
+                        <div class="catalog-card__price-container">
+                          <span class="catalog-card__price-number">40000</span>
+                          <span class="catalog-card__price-number--shadow"
+                            >40000</span
+                          >
+                          <span class="catalog-card__price-symbol">
+                            <svg
+                              class="catalog-card__price-symbol-icon"
+                              role="img"
+                              aria-label="ruble."
+                              width="32"
+                              height="48"
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 27 34"
+                            >
+                              <use href="./img/sprite.svg#ruble" />
+                            </svg>
+                          </span>
+                        </div>
+                        <form action="#" target="_self">
+                          <button
+                            class="catalog-card__button button-light-background"
+                            type="button"
+                          >
+                            купить абонемент
+                          </button>
+                        </form>
+                      </div>
+                    </li>
+                    <li class="subscription__catalog-item catalog-card">
+                      <div class="catalog-card__container" tabindex="0">
+                        <h4 class="catalog-card__title">Дневной</h4>
+                        <span class="catalog-card__title-description"
+                          >с 8:00 до 17:00</span
+                        >
+                        <div class="catalog-card__price-container">
+                          <span class="catalog-card__price-number">15000</span>
+                          <span class="catalog-card__price-number--shadow"
+                            >15000</span
+                          >
+                          <span class="catalog-card__price-symbol">
+                            <svg
+                              class="catalog-card__price-symbol-icon"
+                              role="img"
+                              aria-label="ruble."
+                              width="32"
+                              height="48"
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 27 34"
+                            >
+                              <use href="./img/sprite.svg#ruble" />
+                            </svg>
+                          </span>
+                        </div>
+
+                        <form action="#" target="_self">
+                          <button
+                            class="catalog-card__button button-light-background"
+                            type="button"
+                          >
+                            купить абонемент
+                          </button>
+                        </form>
+                      </div>
+                    </li>
+                    <li class="subscription__catalog-item catalog-card">
+                      <div class="catalog-card__container" tabindex="0">
+                        <h4 class="catalog-card__title">Полный день</h4>
+                        <span class="catalog-card__title-description"
+                          >с 8:00 до 22:00</span
+                        >
+                        <div class="catalog-card__price-container">
+                          <span class="catalog-card__price-number">18000</span>
+                          <span class="catalog-card__price-number--shadow"
+                            >18000</span
+                          >
+                          <span class="catalog-card__price-symbol">
+                            <svg
+                              class="catalog-card__price-symbol-icon"
+                              role="img"
+                              aria-label="ruble."
+                              width="32"
+                              height="48"
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 27 34"
+                            >
+                              <use href="./img/sprite.svg#ruble" />
+                            </svg>
+                          </span>
+                        </div>
+
+                        <form action="#" target="_self">
+                          <button
+                            class="catalog-card__button button-light-background"
+                            type="button"
+                          >
+                            купить абонемент
+                          </button>
+                        </form>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="subscription__decoration-image">
+                <picture>
+                  <!-- <source
                   type="image/webp"
                   media="(min-width: 1200px)"
                   srcset="img/subscription-photo.webp 1x, img/subscription-photo@2x.webp 2x"
                 /> -->
-                <!--
+                  <!--
                 <source
                   type="image/webp"
                   media="(max-width: 1199px)"
@@ -376,22 +619,23 @@
                     subscription-photo-tab@2x.webp 2x
                   "
                 /> -->
-                <source
-                  media="(max-width: 1199px)"
-                  srcset="
-                    img/subscription-photo-tab.png    1x,
-                    img/subscription-photo-tab@2x.png 2x
-                  "
-                />
-                <img
-                  class="subscription__image"
-                  src="img/subscription-photo.png"
-                  alt="Фотография блинов штанги."
-                  width="470"
-                  height="494"
-                  srcset="img/subscription-photo@2x.png 2x"
-                />
-              </picture>
+                  <source
+                    media="(max-width: 1199px)"
+                    srcset="
+                      img/subscription-photo-tab.png    1x,
+                      img/subscription-photo-tab@2x.png 2x
+                    "
+                  />
+                  <img
+                    class="subscription__image"
+                    src="img/subscription-photo.png"
+                    alt="Фотография блинов штанги."
+                    width="470"
+                    height="494"
+                    srcset="img/subscription-photo@2x.png 2x"
+                  />
+                </picture>
+              </div>
             </div>
           </div>
         </section>

@@ -314,6 +314,48 @@ template {
   display: none;
 }
 
+[data-tabs=parent] {
+  overflow: hidden;
+}
+[data-tabs=parent].no-transition > [data-tabs=control],
+[data-tabs=parent].no-transition > [data-tabs=content],
+[data-tabs=parent].no-transition > [data-tabs=element] {
+  -webkit-transition: none;
+  transition: none;
+}
+[data-tabs=parent].no-transition-global [data-tabs=control],
+[data-tabs=parent].no-transition-global [data-tabs=content],
+[data-tabs=parent].no-transition-global [data-tabs=element] {
+  -webkit-transition: none;
+  transition: none;
+}
+
+[data-tabs=parent] [data-tabs=content] {
+  position: relative;
+}
+
+[data-tabs=element] {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in, visibility 0.3s ease-in;
+  transition: opacity 0.3s ease-in, visibility 0.3s ease-in;
+}
+
+[data-tabs=element].for-load {
+  position: static;
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: none;
+  transition: none;
+}
+
+[data-tabs=element].is-active {
+  z-index: 1;
+  visibility: visible;
+  opacity: 1;
+}
+
 @font-face {
   font-style: normal;
   font-weight: 400;
@@ -2046,11 +2088,11 @@ button,
     font-size: 16px;
   }
 }
-.subscription__pagination-button:hover:not(:disabled), .subscription__pagination-button:focus:not(:disabled), .subscription__pagination-button:active:not(:disabled), .subscription__pagination-button--active {
+.subscription__pagination-button:hover:not(:disabled), .subscription__pagination-button:focus:not(:disabled), .subscription__pagination-button:active:not(:disabled), .subscription__pagination-button.is-active {
   outline: none;
   color: #102654;
 }
-.subscription__pagination-button:hover:not(:disabled)::before, .subscription__pagination-button:focus:not(:disabled)::before, .subscription__pagination-button:active:not(:disabled)::before, .subscription__pagination-button--active::before {
+.subscription__pagination-button:hover:not(:disabled)::before, .subscription__pagination-button:focus:not(:disabled)::before, .subscription__pagination-button:active:not(:disabled)::before, .subscription__pagination-button.is-active::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -2072,6 +2114,10 @@ button,
   background-color: #f8f9fc;
   bottom: -2px;
   left: 0;
+}
+
+.subscription__tab-wrapper {
+  width: 100%;
 }
 
 .subscription__catalog {
@@ -2133,6 +2179,10 @@ button,
     width: 423px;
     height: 444px;
   }
+}
+
+.subscription__tab-wrapper {
+  width: 100%;
 }
 
 .catalog-card__container {
@@ -2625,6 +2675,8 @@ button,
   .team__item-container {
     min-width: 226px;
     max-width: 226px;
+    min-height: 274px;
+    max-height: 274px;
   }
 }
 .team__item-container:hover .team__item-hover-container, .team__item-container:focus .team__item-hover-container {
@@ -3246,6 +3298,15 @@ button,
   font-weight: 700;
   text-transform: uppercase;
   cursor: pointer;
+  text-align: left;
+  -ms-flex-item-align: self-start;
+      -ms-grid-row-align: self-start;
+      align-self: self-start;
+}
+@media (max-width: 767px) {
+  .promo__card-button {
+    text-align: center;
+  }
 }
 .promo__card-button:focus:not(:disabled) {
   padding: 10px;
