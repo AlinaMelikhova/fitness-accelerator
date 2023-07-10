@@ -87,7 +87,8 @@
   font-weight: 500;
   padding: 18px;
   min-width: 260px;
-  outline: 1px solid rgba(16, 38, 84, 0.2);
+  box-shadow: 0 0 0 1px rgba(16, 38, 84, 0.2) inset;
+  outline: none;
   text-transform: none;
 
   @include vp-1200 {
@@ -100,10 +101,14 @@
     padding: 13px;
   }
 
-  &--active {
+  &.is-active {
     color: $color-default-white;
     background: $gradient-primary;
   }
+}
+
+.faq__tabs-wrapper {
+  width: 100%;
 }
 
 .faq__accordeon-list {
@@ -157,7 +162,7 @@
   cursor: pointer;
 
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     background-color: $color-primary;
     width: 1px;
@@ -167,7 +172,7 @@
   }
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     background-color: $color-primary;
     height: 1px;
@@ -211,7 +216,7 @@
   &--active {
     background-color: $color-primary;
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       background-color: $color-default-white;
       height: 1px;

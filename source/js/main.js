@@ -3,6 +3,7 @@ import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {initSwipers} from './modules/swiper/swiper';
 import {initTabs} from './vendor/init-tabs';
+import {initAccordions} from './vendor/init-accordion';
 
 const form = new Form();
 form.init();
@@ -15,6 +16,7 @@ window.addEventListener('DOMContentLoaded', () => {
   initSwipers();
   iosVhFix();
   initTabs();
+  initAccordions();
 
   // Modules
   // ---------------------------------
