@@ -1273,6 +1273,161 @@ button,
   color: #15ab07;
 }
 
+.swiper__button {
+  padding: 0;
+  width: 56px;
+  height: 56px;
+  background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+  border: none;
+  content: "";
+}
+@media (max-width: 767px) {
+  .swiper__button {
+    width: 30px;
+    height: 30px;
+  }
+}
+.swiper__button--team {
+  top: var(--swiper-navigation-top-offset, 55%);
+}
+.swiper__button--team-prev {
+  left: 27px;
+}
+.swiper__button--team-prev::after {
+  content: "";
+}
+@media (max-width: 1199px) {
+  .swiper__button--team-prev {
+    left: 25px;
+  }
+}
+@media (max-width: 767px) {
+  .swiper__button--team-prev {
+    left: 5px;
+  }
+}
+.swiper__button--team-next {
+  right: 27px;
+}
+.swiper__button--team-next::after {
+  content: "";
+}
+@media (max-width: 1199px) {
+  .swiper__button--team-next {
+    right: 25px;
+  }
+}
+@media (max-width: 767px) {
+  .swiper__button--team-next {
+    right: 5px;
+  }
+}
+@media (max-width: 1199px) {
+  .swiper__button--team {
+    top: var(--swiper-navigation-top-offset, 52%);
+  }
+}
+@media (max-width: 767px) {
+  .swiper__button--team {
+    top: var(--swiper-navigation-top-offset, 56%);
+  }
+}
+.swiper__button--reviews {
+  top: var(--swiper-navigation-top-offset, 58%);
+}
+.swiper__button--reviews-prev {
+  left: 325px;
+}
+.swiper__button--reviews-prev::after {
+  content: "";
+}
+@media (max-width: 1199px) {
+  .swiper__button--reviews-prev {
+    left: 25px;
+  }
+}
+@media (max-width: 767px) {
+  .swiper__button--reviews-prev {
+    left: 4px;
+  }
+}
+.swiper__button--reviews-next {
+  right: 325px;
+}
+.swiper__button--reviews-next::after {
+  content: "";
+}
+@media (max-width: 1199px) {
+  .swiper__button--reviews-next {
+    right: 25px;
+  }
+}
+@media (max-width: 767px) {
+  .swiper__button--reviews-next {
+    right: 4px;
+  }
+}
+@media (max-width: 1199px) {
+  .swiper__button--reviews {
+    top: var(--swiper-navigation-top-offset, 57%);
+  }
+}
+@media (max-width: 767px) {
+  .swiper__button--reviews {
+    top: var(--swiper-navigation-top-offset, 58%);
+  }
+}
+.swiper__button:hover:not(:disabled), .swiper__button:focus:not(:disabled) {
+  border: 1px solid #102654;
+  border-radius: 50%;
+}
+.swiper__button:active:not(:disabled) {
+  border: 1px solid #102654;
+  border-radius: 50%;
+  background-color: #102654;
+}
+.swiper__button:hover:not(:disabled) svg, .swiper__button:focus:not(:disabled) svg {
+  stroke: #102654;
+}
+.swiper__button:active:not(:disabled) svg {
+  stroke: #ffffff;
+}
+.swiper__button:disabled svg {
+  stroke: #102654;
+  opacity: 0.3;
+}
+
+.swiper-button-next svg,
+.swiper-button-prev svg {
+  width: 18px;
+  height: 36px;
+}
+@media (max-width: 767px) {
+  .swiper-button-next svg,
+.swiper-button-prev svg {
+    width: 10px;
+    height: 19px;
+  }
+}
+
+.swiper__button-icon {
+  width: 16px;
+  height: 32px;
+  stroke: rgb(175, 175, 175);
+}
+@media (max-width: 767px) {
+  .swiper__button-icon {
+    width: 10px;
+    height: 19px;
+  }
+}
+.swiper__button-icon--prev {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
 .page-header__container {
   background: conic-gradient(from 139.4deg at 20.7% 35.74%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
   padding-top: 40px;
@@ -2377,6 +2532,7 @@ button,
 }
 
 .team__container {
+  position: relative;
   background-color: #ffffff;
   padding-top: 40px;
   padding-bottom: 94px;
@@ -2434,15 +2590,25 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
   margin: 0 auto;
   padding: 0;
   list-style-type: none;
 }
 
 .team__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.team__item-container {
+  position: relative;
   min-width: 260px;
   max-width: 260px;
   min-height: 294px;
@@ -2450,18 +2616,22 @@ button,
   overflow: hidden;
 }
 @media (max-width: 1199px) {
-  .team__item {
-    min-width: 268px;
-    max-width: 268px;
+  .team__item-container {
+    min-width: 269px;
+    max-width: 269px;
   }
 }
 @media (max-width: 767px) {
-  .team__item {
+  .team__item-container {
     min-width: 226px;
     max-width: 226px;
-    min-height: 274px;
-    max-height: 274px;
   }
+}
+.team__item-container:hover .team__item-hover-container, .team__item-container:focus .team__item-hover-container {
+  display: block;
+}
+.team__item-container:hover .team__item-name, .team__item-container:focus .team__item-name {
+  display: none;
 }
 
 @media (max-width: 1199px) {
@@ -2473,15 +2643,15 @@ button,
 @media (max-width: 767px) {
   .team__item-photo {
     position: relative;
-    left: -17px;
-    top: -5px;
+    top: -20px;
+    left: -20px;
   }
 }
 
 .team__item-name {
   position: absolute;
   width: 100%;
-  bottom: 31px;
+  bottom: 23px;
   left: 0;
   text-align: center;
   color: #ffffff;
@@ -2489,6 +2659,11 @@ button,
   font-family: "Roboto Condenced", "Arial", sans-serif;
   font-weight: 700;
   line-height: 150%;
+}
+@media (max-width: 1199px) {
+  .team__item-name {
+    bottom: 31px;
+  }
 }
 
 .team__item-hover-container {
@@ -2501,11 +2676,12 @@ button,
   left: 0;
   background-color: rgba(16, 38, 84, 0.89);
   color: #ffffff;
-  padding: 54px;
+  padding: 54px 46px 54px 54px;
   text-align: center;
 }
 @media (max-width: 1199px) {
   .team__item-hover-container {
+    padding: 54px;
     min-width: 268px;
     max-width: 268px;
   }
@@ -2513,21 +2689,10 @@ button,
 @media (max-width: 767px) {
   .team__item-hover-container {
     padding: 43px 32px;
-    min-width: 226px;
-    max-width: 226px;
+    min-width: 100%;
     min-height: 274px;
     max-height: 274px;
   }
-}
-
-.team__item-container {
-  position: relative;
-}
-.team__item-container:hover .team__item-hover-container, .team__item-container:focus .team__item-hover-container {
-  display: block;
-}
-.team__item-container:hover .team__item-name, .team__item-container:focus .team__item-name {
-  display: none;
 }
 
 .team__item-hover-name {
@@ -3532,6 +3697,7 @@ button,
 }
 
 .reviews__container {
+  position: relative;
   background-color: #ffffff;
   padding: 111px 403px 120px;
 }
@@ -4274,7 +4440,7 @@ button,
   opacity: 0.3;
   cursor: auto;
 }
-.footer-navigation__social-button:hover svg, .footer-navigation__social-button:focus svg {
+.footer-navigation__social-button:hover:not(:disabled) svg, .footer-navigation__social-button:focus:not(:disabled) svg {
   color: #ffffff;
 }
 

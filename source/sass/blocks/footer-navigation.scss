@@ -117,7 +117,7 @@
   }
 
   &:hover:not(:disabled)::before {
-    content: "";
+    content: '';
     position: absolute;
     display: block;
     width: 100%;
@@ -133,7 +133,7 @@
   }
 
   &:focus:not(:disabled)::before {
-    content: "";
+    content: '';
     position: absolute;
     display: block;
     width: calc(100% + 10px);
@@ -212,8 +212,8 @@
     cursor: auto;
   }
 
-  &:hover svg,
-  &:focus svg {
+  &:hover:not(:disabled) svg,
+  &:focus:not(:disabled) svg {
     color: $color-default-white;
   }
 }
