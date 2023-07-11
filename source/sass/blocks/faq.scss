@@ -129,26 +129,49 @@
   &:last-child {
     border-bottom: 1px solid rgba(28, 51, 116, 0.2);
   }
+
+  & p {
+    margin: 0;
+    margin-top: 8px;
+    padding: 0;
+    padding-right: 162px;
+    color: $color-primary;
+    font-size: 18px;
+    font-family: $font-family-secondary;
+    font-weight: 300;
+    line-height: 140%;
+    visibility: hidden;
+
+    @include vp-1200 {
+      padding-right: 76px;
+    }
+
+    @include vp-767 {
+      margin-top: 12px;
+      font-size: 16px;
+      padding-right: 0;
+    }
+  }
 }
 
 .faq__accordeon-title-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
 
-.faq__accordeon-title {
-  margin: 0;
-  padding: 0;
-  color: $color-primary;
-  font-size: 24px;
-  font-family: $font-family-secondary;
-  font-weight: 500;
-  line-height: 100%;
+  & h5 {
+    margin: 0;
+    padding: 0;
+    color: $color-primary;
+    font-size: 24px;
+    font-family: $font-family-secondary;
+    font-weight: 500;
+    line-height: 100%;
 
-  @include vp-767 {
-    font-size: 18px;
-    line-height: 118%;
+    @include vp-767 {
+      font-size: 18px;
+      line-height: 118%;
+    }
   }
 }
 
@@ -162,7 +185,7 @@
   cursor: pointer;
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     background-color: $color-primary;
     width: 1px;
@@ -172,7 +195,7 @@
   }
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     background-color: $color-primary;
     height: 1px;
@@ -216,7 +239,7 @@
   .faq__accordeon-item.is-active & {
     background-color: $color-primary;
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       background-color: $color-default-white;
       height: 1px;
@@ -234,29 +257,6 @@
   }
 }
 
-.faq__accordeon-description {
-  margin: 0;
-  margin-top: 8px;
-  padding: 0;
-  padding-right: 162px;
-  color: $color-primary;
-  font-size: 18px;
-  font-family: $font-family-secondary;
-  font-weight: 300;
-  line-height: 140%;
-  visibility: hidden;
-
-  @include vp-1200 {
-    padding-right: 76px;
-  }
-
-  @include vp-767 {
-    margin-top: 12px;
-    font-size: 16px;
-    padding-right: 0;
-  }
-}
-
-.faq__accordeon-item.is-active .faq__accordeon-description {
+.faq__accordeon-item.is-active p {
   visibility: visible;
 }

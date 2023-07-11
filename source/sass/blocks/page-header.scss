@@ -25,6 +25,13 @@
   justify-content: space-between;
 }
 
+.page-header__logo:focus,
+.page-header__tel:focus,
+.page-header__tel:focus-visible {
+  outline: none;
+  outline-offset: 0;
+}
+
 .page-header__logo-icon {
   @include vp-1200 {
     width: 82px;
