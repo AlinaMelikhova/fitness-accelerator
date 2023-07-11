@@ -188,16 +188,16 @@
 }
 
 .about__video-cover-button {
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
   position: absolute;
   top: calc(50% - 50px);
   left: calc(50% - 50px);
   width: 100px;
   height: 100px;
-  border-radius: 50%;
   background-color: $color-transparent;
-  border: 3px solid;
-  border-image: $gradient-primary;
-  border-image-slice: 1;
+  border: none;
 
   @include vp-1200 {
     top: calc(50% - 36px);
@@ -205,21 +205,68 @@
     width: 73px;
     height: 73px;
   }
+
+  &:focus img,
+  &:active img,
+  &:disabled img,
+  &:hover img {
+    display: none;
+  }
+
+  &:focus .about__video-cover-button-icon,
+  &:disabled .about__video-cover-button-icon,
+  &:hover .about__video-cover-button-icon {
+    fill: $color-primary;
+  }
+
+  &:focus,
+  &:disabled,
+  &:hover {
+    box-shadow: 0 0 0 2px $color-primary inset;
+    outline: none;
+    background-color: $color-transparent;
+    border-radius: 50%;
+  }
+
+  &:focus .about__video-cover-button-mark,
+  &:disabled .about__video-cover-button-mark,
+  &:hover .about__video-cover-button-mark {
+    background-color: $color-default-white;
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    width: 72px;
+    height: 72px;
+    top: calc(50% - 36px);
+    left: calc(50% - 36px);
+  }
+
+  &:active:not(:disabled) .about__video-cover-button-mark {
+    width: 58px;
+    height: 58px;
+    top: calc(50% - 29px);
+    left: calc(50% - 29px);
+    background-color: $color-default-white;
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: auto;
+  }
 }
 
-.about__video-cover-button-mark {
+.about__video-cover-button-icon {
   position: absolute;
-  top: calc(50% - 36px);
-  left: calc(50% - 36px);
-  width: 72px;
-  height: 72px;
-  border-radius: 50%;
-  background: $gradient-primary;
+  top: calc(50% - 10px);
+  left: calc(50% - 6px);
+  width: 17px;
+  height: 17px;
+  fill: $color-default-white;
 
   @include vp-1200 {
-    top: calc(50% - 26px);
-    left: calc(50% - 26px);
-    width: 52px;
-    height: 52px;
+    top: calc(50% - 6px);
+    left: calc(50% - 6px);
+    width: 12px;
+    height: 12px;
   }
 }

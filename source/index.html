@@ -172,16 +172,6 @@
                 </picture>
               </div>
               <div class="about__multimedia-video-container">
-                <iframe
-                  class="about__multimedia-video"
-                  width="364"
-                  height="228"
-                  src="https://www.youtube.com/embed/9TZXsZItgdw"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
-                ></iframe>
                 <div class="about__multimedia-video-cover">
                   <picture>
                     <!-- <source
@@ -222,7 +212,36 @@
                     />
                   </picture>
                   <button class="about__video-cover-button" type="button">
-                    <span class="about__video-cover-button-mark"></span>
+                    <picture>
+                      <source
+                        media="(max-width: 1199px)"
+                        srcset="
+                          img/about-button-tab.png    1x,
+                          img/about-button-tab@2x.png 2x
+                        "
+                      />
+                      <img
+                        class="about__button-image"
+                        src="img/about-button.png"
+                        alt="кнопка запуска видео."
+                        width="100"
+                        height="100"
+                        srcset="img/about-button@2x.png 2x"
+                      />
+                    </picture>
+                    <span class="about__video-cover-button-mark">
+                      <svg
+                        class="about__video-cover-button-icon"
+                        role="img"
+                        aria-label="play."
+                        width="18"
+                        height="18"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 18 18"
+                      >
+                        <use href="./img/sprite.svg#play" />
+                      </svg>
+                    </span>
                   </button>
                 </div>
               </div>
@@ -1221,19 +1240,25 @@
                 </li>
               </ul>
               <div data-tabs="content" class="faq__tabs-wrapper">
-                <ul class="faq__accordeon-list" data-tabs="element">
-                  <li class="faq__accordeon-item">
+                <ul
+                  class="faq__accordeon-list"
+                  data-tabs="element"
+                  data-accordion="parent"
+                >
+                  <li class="faq__accordeon-item" data-accordion="element">
                     <div class="faq__accordeon-title-container">
                       <h5 class="faq__accordeon-title">
                         Как стать членом фитнес-центра?
                       </h5>
                       <button
-                        class="faq__accordeon-button faq__accordeon-button--active"
+                        class="faq__accordeon-button"
+                        data-accordion="button"
                         type="button"
                       ></button>
                     </div>
                     <p
-                      class="faq__accordeon-description faq__accordeon-description--active"
+                      class="faq__accordeon-description"
+                      data-accordion="content"
                     >
                       При первом посещении и&nbsp;покупке абонемента, необходимо
                       заполнить анкету и&nbsp;подписать договор. При покупке
@@ -1241,41 +1266,49 @@
                       и&nbsp;договор придет вам на&nbsp;почту.
                     </p>
                   </li>
-                  <li class="faq__accordeon-item">
+                  <li class="faq__accordeon-item" data-accordion="element">
                     <div class="faq__accordeon-title-container">
                       <h5 class="faq__accordeon-title">
                         Где можно посмотреть расписание?
                       </h5>
                       <button
                         class="faq__accordeon-button"
+                        data-accordion="button"
                         type="button"
                       ></button>
                     </div>
-                    <p class="faq__accordeon-description">
+                    <p
+                      class="faq__accordeon-description"
+                      data-accordion="content"
+                    >
                       При первом посещении и&nbsp;покупке абонемента, необходимо
                       заполнить анкету и&nbsp;подписать договор. При покупке
                       абонемента онлайн, анкета также заполняется онлайн
                       и&nbsp;договор придет вам на&nbsp;почту.
                     </p>
                   </li>
-                  <li class="faq__accordeon-item">
+                  <li class="faq__accordeon-item" data-accordion="element">
                     <div class="faq__accordeon-title-container">
                       <h5 class="faq__accordeon-title">
                         Есть кулеры в&nbsp;центре? Предоставляются полотенца?
                       </h5>
                       <button
                         class="faq__accordeon-button"
+                        data-accordion="button"
                         type="button"
                       ></button>
                     </div>
-                    <p class="faq__accordeon-description">
+                    <p
+                      class="faq__accordeon-description"
+                      data-accordion="content"
+                    >
                       При первом посещении и&nbsp;покупке абонемента, необходимо
                       заполнить анкету и&nbsp;подписать договор. При покупке
                       абонемента онлайн, анкета также заполняется онлайн
                       и&nbsp;договор придет вам на&nbsp;почту.
                     </p>
                   </li>
-                  <li class="faq__accordeon-item">
+                  <li class="faq__accordeon-item" data-accordion="element">
                     <div class="faq__accordeon-title-container">
                       <h5 class="faq__accordeon-title">
                         Сколько тренеров работает в&nbsp;клубе и&nbsp;какова
@@ -1283,10 +1316,14 @@
                       </h5>
                       <button
                         class="faq__accordeon-button"
+                        data-accordion="button"
                         type="button"
                       ></button>
                     </div>
-                    <p class="faq__accordeon-description">
+                    <p
+                      class="faq__accordeon-description"
+                      data-accordion="content"
+                    >
                       При первом посещении и&nbsp;покупке абонемента, необходимо
                       заполнить анкету и&nbsp;подписать договор. При покупке
                       абонемента онлайн, анкета также заполняется онлайн
@@ -1294,19 +1331,25 @@
                     </p>
                   </li>
                 </ul>
-                <ul class="faq__accordeon-list" data-tabs="element">
-                  <li class="faq__accordeon-item">
+                <ul
+                  class="faq__accordeon-list"
+                  data-tabs="element"
+                  data-accordion="parent"
+                >
+                  <li class="faq__accordeon-item" data-accordion="element">
                     <div class="faq__accordeon-title-container">
                       <h5 class="faq__accordeon-title">
                         Занятия с&nbsp;тренером входят в&nbsp;абонемент?
                       </h5>
                       <button
-                        class="faq__accordeon-button faq__accordeon-button--active"
+                        class="faq__accordeon-button"
+                        data-accordion="button"
                         type="button"
                       ></button>
                     </div>
                     <p
-                      class="faq__accordeon-description faq__accordeon-description--active"
+                      class="faq__accordeon-description"
+                      data-accordion="content"
                     >
                       При посещении тренажерного зала вам необходимо оплачить
                       занятия с&nbsp;тренером отдельно. В&nbsp;зале всегда
@@ -1315,17 +1358,22 @@
                       или технике выполнения упражнения.
                     </p>
                   </li>
-                  <li class="faq__accordeon-item">
+                  <li class="faq__accordeon-item" data-accordion="element">
                     <div class="faq__accordeon-title-container">
                       <h5 class="faq__accordeon-title">
                         Можно ли заморозить абонемент?
                       </h5>
                       <button
                         class="faq__accordeon-button"
+                        data-accordion="button"
                         type="button"
                       ></button>
                     </div>
-                    <p class="faq__accordeon-description">
+                    <p
+                      class="faq__accordeon-description"
+                      data-accordion="content"
+                      data-accordion="content"
+                    >
                       При посещении тренажерного зала вам необходимо оплачить
                       занятия с&nbsp;тренером отдельно. В&nbsp;зале всегда
                       присутствует дежурный тренер, которому можно задать
@@ -1333,7 +1381,7 @@
                       или технике выполнения упражнения.
                     </p>
                   </li>
-                  <li class="faq__accordeon-item">
+                  <li class="faq__accordeon-item" data-accordion="element">
                     <div class="faq__accordeon-title-container">
                       <h5 class="faq__accordeon-title">
                         Есть ли лимит по посещениям тренажерного зала и
@@ -1341,10 +1389,14 @@
                       </h5>
                       <button
                         class="faq__accordeon-button"
+                        data-accordion="button"
                         type="button"
                       ></button>
                     </div>
-                    <p class="faq__accordeon-description">
+                    <p
+                      class="faq__accordeon-description"
+                      data-accordion="content"
+                    >
                       При посещении тренажерного зала вам необходимо оплачить
                       занятия с&nbsp;тренером отдельно. В&nbsp;зале всегда
                       присутствует дежурный тренер, которому можно задать
@@ -1352,17 +1404,21 @@
                       или технике выполнения упражнения.
                     </p>
                   </li>
-                  <li class="faq__accordeon-item">
+                  <li class="faq__accordeon-item" data-accordion="element">
                     <div class="faq__accordeon-title-container">
                       <h5 class="faq__accordeon-title">
                         Что такое семейный доступ и доступ для друзей?
                       </h5>
                       <button
                         class="faq__accordeon-button"
+                        data-accordion="button"
                         type="button"
                       ></button>
                     </div>
-                    <p class="faq__accordeon-description">
+                    <p
+                      class="faq__accordeon-description"
+                      data-accordion="content"
+                    >
                       При посещении тренажерного зала вам необходимо оплачить
                       занятия с&nbsp;тренером отдельно. В&nbsp;зале всегда
                       присутствует дежурный тренер, которому можно задать
@@ -1371,27 +1427,33 @@
                     </p>
                   </li>
                 </ul>
-                <ul class="faq__accordeon-list" data-tabs="element">
-                  <li class="faq__accordeon-item">
+                <ul
+                  class="faq__accordeon-list"
+                  data-tabs="element"
+                  data-accordion="parent"
+                >
+                  <li class="faq__accordeon-item" data-accordion="element">
                     <div class="faq__accordeon-title-container">
                       <h5 class="faq__accordeon-title">
                         Предлагает&nbsp;ли клуб услуги по&nbsp;консультированию
                         по&nbsp;вопросам питания?
                       </h5>
                       <button
-                        class="faq__accordeon-button faq__accordeon-button--active"
+                        class="faq__accordeon-button"
+                        data-accordion="button"
                         type="button"
                       ></button>
                     </div>
                     <p
-                      class="faq__accordeon-description faq__accordeon-description--active"
+                      class="faq__accordeon-description"
+                      data-accordion="content"
                     >
                       Да. Вы&nbsp;можете обратиться как к&nbsp;своему тренеру,
                       так и&nbsp;к&nbsp;нашему нутрициологу. Специалист уточнит
                       ваши данные, цели и&nbsp;предложит программу питания.
                     </p>
                   </li>
-                  <li class="faq__accordeon-item">
+                  <li class="faq__accordeon-item" data-accordion="element">
                     <div class="faq__accordeon-title-container">
                       <h5 class="faq__accordeon-title">
                         Проводятся&nbsp;ли в&nbsp;клубе какие-либо мероприятия
@@ -1399,16 +1461,20 @@
                       </h5>
                       <button
                         class="faq__accordeon-button"
+                        data-accordion="button"
                         type="button"
                       ></button>
                     </div>
-                    <p class="faq__accordeon-description">
+                    <p
+                      class="faq__accordeon-description"
+                      data-accordion="content"
+                    >
                       Да. Вы&nbsp;можете обратиться как к&nbsp;своему тренеру,
                       так и&nbsp;к&nbsp;нашему нутрициологу. Специалист уточнит
                       ваши данные, цели и&nbsp;предложит программу питания.
                     </p>
                   </li>
-                  <li class="faq__accordeon-item">
+                  <li class="faq__accordeon-item" data-accordion="element">
                     <div class="faq__accordeon-title-container">
                       <h5 class="faq__accordeon-title">
                         Можно&nbsp;ли приобрести в&nbsp;центре спортивное
@@ -1416,45 +1482,59 @@
                       </h5>
                       <button
                         class="faq__accordeon-button"
+                        data-accordion="button"
                         type="button"
                       ></button>
                     </div>
-                    <p class="faq__accordeon-description">
+                    <p
+                      class="faq__accordeon-description"
+                      data-accordion="content"
+                    >
                       Да. Вы&nbsp;можете обратиться как к&nbsp;своему тренеру,
                       так и&nbsp;к&nbsp;нашему нутрициологу. Специалист уточнит
                       ваши данные, цели и&nbsp;предложит программу питания.
                     </p>
                   </li>
-                  <li class="faq__accordeon-item">
+                  <li class="faq__accordeon-item" data-accordion="element">
                     <div class="faq__accordeon-title-container">
                       <h5 class="faq__accordeon-title">
                         Есть&nbsp;ли в&nbsp;центре детская комната?
                       </h5>
                       <button
                         class="faq__accordeon-button"
+                        data-accordion="button"
                         type="button"
                       ></button>
                     </div>
-                    <p class="faq__accordeon-description">
+                    <p
+                      class="faq__accordeon-description"
+                      data-accordion="content"
+                    >
                       Да. Вы&nbsp;можете обратиться как к&nbsp;своему тренеру,
                       так и&nbsp;к&nbsp;нашему нутрициологу. Специалист уточнит
                       ваши данные, цели и&nbsp;предложит программу питания.
                     </p>
                   </li>
                 </ul>
-                <ul class="faq__accordeon-list" data-tabs="element">
-                  <li class="faq__accordeon-item">
+                <ul
+                  class="faq__accordeon-list"
+                  data-tabs="element"
+                  data-accordion="parent"
+                >
+                  <li class="faq__accordeon-item" data-accordion="element">
                     <div class="faq__accordeon-title-container">
                       <h5 class="faq__accordeon-title">
                         Есть в&nbsp;фитнес-центре дресс-код?
                       </h5>
                       <button
-                        class="faq__accordeon-button faq__accordeon-button--active"
+                        class="faq__accordeon-button"
+                        data-accordion="button"
                         type="button"
                       ></button>
                     </div>
                     <p
-                      class="faq__accordeon-description faq__accordeon-description--active"
+                      class="faq__accordeon-description"
+                      data-accordion="content"
                     >
                       Для тренировок необходимо иметь предназначенную для этого
                       закрытую спортивную обувь и&nbsp;одежду. Верхняя
@@ -1466,7 +1546,7 @@
                       классы (например, йога, пилатес).
                     </p>
                   </li>
-                  <li class="faq__accordeon-item">
+                  <li class="faq__accordeon-item" data-accordion="element">
                     <div class="faq__accordeon-title-container">
                       <h5 class="faq__accordeon-title">
                         Можно&nbsp;ли приводить с&nbsp;собой детей
@@ -1474,10 +1554,14 @@
                       </h5>
                       <button
                         class="faq__accordeon-button"
+                        data-accordion="button"
                         type="button"
                       ></button>
                     </div>
-                    <p class="faq__accordeon-description">
+                    <p
+                      class="faq__accordeon-description"
+                      data-accordion="content"
+                    >
                       Для тренировок необходимо иметь предназначенную для этого
                       закрытую спортивную обувь и&nbsp;одежду. Верхняя
                       и&nbsp;нижняя части тела должны быть закрыты (используйте
@@ -1488,17 +1572,21 @@
                       классы (например, йога, пилатес).
                     </p>
                   </li>
-                  <li class="faq__accordeon-item">
+                  <li class="faq__accordeon-item" data-accordion="element">
                     <div class="faq__accordeon-title-container">
                       <h5 class="faq__accordeon-title">
                         Какие дополнительные правила посещения центра?
                       </h5>
                       <button
                         class="faq__accordeon-button"
+                        data-accordion="button"
                         type="button"
                       ></button>
                     </div>
-                    <p class="faq__accordeon-description">
+                    <p
+                      class="faq__accordeon-description"
+                      data-accordion="content"
+                    >
                       Для тренировок необходимо иметь предназначенную для этого
                       закрытую спортивную обувь и&nbsp;одежду. Верхняя
                       и&nbsp;нижняя части тела должны быть закрыты (используйте
@@ -1509,7 +1597,7 @@
                       классы (например, йога, пилатес).
                     </p>
                   </li>
-                  <li class="faq__accordeon-item">
+                  <li class="faq__accordeon-item" data-accordion="element">
                     <div class="faq__accordeon-title-container">
                       <h5 class="faq__accordeon-title">
                         Нужна&nbsp;ли медицинская справка для посещения залов
@@ -1517,10 +1605,14 @@
                       </h5>
                       <button
                         class="faq__accordeon-button"
+                        data-accordion="button"
                         type="button"
                       ></button>
                     </div>
-                    <p class="faq__accordeon-description">
+                    <p
+                      class="faq__accordeon-description"
+                      data-accordion="content"
+                    >
                       Для тренировок необходимо иметь предназначенную для этого
                       закрытую спортивную обувь и&nbsp;одежду. Верхняя
                       и&nbsp;нижняя части тела должны быть закрыты (используйте

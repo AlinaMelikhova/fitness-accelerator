@@ -2,6 +2,7 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {initSwipers} from './modules/swiper/swiper';
+import {playVideo} from './modules/youtube';
 import {initTabs} from './vendor/init-tabs';
 import {initAccordions} from './vendor/init-accordion';
 
@@ -19,6 +20,7 @@ window.addEventListener('DOMContentLoaded', () => {
   initAccordions();
 
   // Modules
+  playVideo();
   // ---------------------------------
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
