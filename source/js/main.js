@@ -3,6 +3,7 @@ import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {initSwipers} from './modules/swiper/swiper';
 import {playVideo} from './modules/youtube';
+import {handlerTeamMembers} from './modules/team-cards';
 import {initTabs} from './vendor/init-tabs';
 import {initAccordions} from './vendor/init-accordion';
 
@@ -21,6 +22,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Modules
   playVideo();
+  handlerTeamMembers();
   // ---------------------------------
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'

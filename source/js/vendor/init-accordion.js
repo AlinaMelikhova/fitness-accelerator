@@ -9,7 +9,6 @@ const initAccordions = () => {
   Array.from(document.querySelectorAll('.faq__accordeon-list')).forEach(
     (accordion) => {
       accordions.closeAllAccordion(accordion);
-      console.log('accordion ' + accordion);
     }
   );
 };

@@ -87,6 +87,10 @@
     flex-grow: 1;
     margin-left: 0;
     justify-content: end;
+
+    & form {
+      width: 100%;
+    }
   }
 }
 
@@ -190,7 +194,7 @@
   margin-top: -13px;
 
   @include vp-1200 {
-    margin-left: 31px;
+    margin-left: auto;
     margin-top: 20px;
   }
 

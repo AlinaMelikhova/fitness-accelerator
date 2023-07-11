@@ -9,8 +9,6 @@ const addYoutubeVideo = () => {
   youtubeFrame.src =
     'https://www.youtube.com/embed/9TZXsZItgdw?autoplay=1&rel=0';
   youtubeFrame.classList.add('about__multimedia-video');
-  youtubeFrame.style.width = '364px';
-  youtubeFrame.style.height = '228px';
   youtubeFrame.title = 'YouTube video player';
   youtubeFrame.frameborder = '0';
   youtubeFrame.allow =

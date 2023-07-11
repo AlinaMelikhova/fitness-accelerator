@@ -161,6 +161,9 @@
 }
 
 .about__multimedia-video {
+  width: 364px;
+  height: 228px;
+
   @include vp-1200 {
     width: 266px;
     height: 167px;

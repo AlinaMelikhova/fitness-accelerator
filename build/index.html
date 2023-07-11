@@ -110,7 +110,7 @@
         </div>
       </header>
       <main>
-        <section class="about">
+        <section class="about" id="about">
           <div class="about__container container">
             <div class="about__description-container">
               <h2 class="about__title">Тренажерный зал</h2>
@@ -658,7 +658,7 @@
             </div>
           </div>
         </section>
-        <section class="events">
+        <section class="events" id="events">
           <div class="events__container container">
             <div class="events__card">
               <div class="events__card-description-container">
@@ -745,7 +745,7 @@
             </div>
           </div>
         </section>
-        <section class="team">
+        <section class="team" id="team">
           <div class="team__container container">
             <h2 class="team__title">Тренеры</h2>
             <div class="swiper swiper-team">
@@ -1036,7 +1036,7 @@
             </button>
           </div>
         </section>
-        <section class="benefits">
+        <section class="benefits" id="benefits">
           <div class="benefits__container container">
             <h2 class="benefits__title">Наши преимущества</h2>
             <div class="benefits__list-container">
@@ -1114,7 +1114,7 @@
             </div>
           </div>
         </section>
-        <section class="promo">
+        <section class="promo" id="promo">
           <div class="promo__container container">
             <h2 class="promo__title">Акции</h2>
             <div class="promo__list-container">
@@ -1197,7 +1197,7 @@
             </div>
           </div>
         </section>
-        <section class="faq">
+        <section class="faq" id="faq">
           <div class="faq__container container">
             <h2 class="faq__title">Вопросы и ответы</h2>
             <div class="faq__lists-container" data-tabs="parent">
@@ -1843,48 +1843,48 @@
             <nav class="footer-navigation__navigation">
               <ul class="footer-navigation__list">
                 <li class="footer-navigation__item">
-                  <a class="footer-navigation__link" href="#">
-                    <button class="footer-navigation__button" type="button">
+                  <form action="#about" target="_self">
+                    <button class="footer-navigation__button" type="submit">
                       Услуги
                     </button>
-                  </a>
+                  </form>
                 </li>
                 <li class="footer-navigation__item">
-                  <a class="footer-navigation__link" href="#">
-                    <button class="footer-navigation__button" type="button">
+                  <form action="#subscription" target="_self">
+                    <button class="footer-navigation__button" type="submit">
                       Абонементы
                     </button>
-                  </a>
+                  </form>
                 </li>
                 <li class="footer-navigation__item">
-                  <a class="footer-navigation__link" href="#">
-                    <button class="footer-navigation__button" type="button">
+                  <form action="#promo" target="_self">
+                    <button class="footer-navigation__button" type="submit">
                       Акции
                     </button>
-                  </a>
+                  </form>
                 </li>
                 <li class="footer-navigation__item">
-                  <a class="footer-navigation__link" href="#">
-                    <button class="footer-navigation__button" type="button">
+                  <form action="#team" target="_self">
+                    <button class="footer-navigation__button" type="submit">
                       Тренеры
                     </button>
-                  </a>
+                  </form>
                 </li>
                 <li class="footer-navigation__item">
-                  <a class="footer-navigation__link" href="#">
-                    <button class="footer-navigation__button" type="button">
+                  <form action="#events" target="_self">
+                    <button class="footer-navigation__button" type="submit">
                       Расписание
                     </button>
-                  </a>
+                  </form>
                 </li>
               </ul>
             </nav>
             <ul class="footer-navigation__social-list">
               <li class="footer-navigation__social-item">
-                <a class="footer-navigation__social-link" href="#">
+                <form action="#" target="_blanc">
                   <button
                     class="footer-navigation__social-button"
-                    type="button"
+                    type="submit"
                   >
                     <svg
                       class="footer-navigation__social-icon"
@@ -1898,13 +1898,13 @@
                       <use href="./img/sprite.svg#vk" />
                     </svg>
                   </button>
-                </a>
+                </form>
               </li>
               <li class="footer-navigation__social-item">
-                <a class="footer-navigation__social-link" href="#">
+                <form action="#" target="_blanc">
                   <button
                     class="footer-navigation__social-button"
-                    type="button"
+                    type="submit"
                   >
                     <svg
                       class="footer-navigation__social-icon"
@@ -1918,13 +1918,13 @@
                       <use href="./img/sprite.svg#ok" />
                     </svg>
                   </button>
-                </a>
+                </form>
               </li>
               <li class="footer-navigation__social-item">
-                <a class="footer-navigation__social-link" href="#">
+                <form action="#" target="_blanc">
                   <button
                     class="footer-navigation__social-button"
-                    type="button"
+                    type="submit"
                   >
                     <svg
                       class="footer-navigation__social-icon"
@@ -1938,7 +1938,7 @@
                       <use href="./img/sprite.svg#reddit" />
                     </svg>
                   </button>
-                </a>
+                </form>
               </li>
             </ul>
           </div>

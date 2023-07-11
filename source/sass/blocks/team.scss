@@ -51,18 +51,6 @@
   max-height: 294px;
   overflow: hidden;
 
-  @include vp-1200 {
-    min-width: 269px;
-    max-width: 269px;
-  }
-
-  @include vp-767 {
-    min-width: 226px;
-    max-width: 226px;
-    min-height: 274px;
-    max-height: 274px;
-  }
-
   &:hover .team__item-hover-container,
   &:focus .team__item-hover-container {
     display: block;
@@ -71,6 +59,39 @@
   &:hover .team__item-name,
   &:focus .team__item-name {
     display: none;
+  }
+
+  @include vp-1200 {
+    min-width: 269px;
+    max-width: 269px;
+    cursor: pointer;
+
+    &:hover .team__item-hover-container,
+    &:focus .team__item-hover-container {
+      display: none;
+    }
+
+    &:hover .team__item-name,
+    &:focus .team__item-name {
+      display: block;
+    }
+  }
+
+  @include vp-767 {
+    min-width: 226px;
+    max-width: 226px;
+    min-height: 274px;
+    max-height: 274px;
+
+    &:hover .team__item-hover-container,
+    &:focus .team__item-hover-container {
+      display: none;
+    }
+
+    &:hover .team__item-name,
+    &:focus .team__item-name {
+      display: block;
+    }
   }
 }
 

@@ -174,14 +174,6 @@
   }
 }
 
-.footer-navigation__social-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 25px;
-  height: 25px;
-}
-
 .footer-navigation__social-button {
   background-color: $color-default-white;
   margin: 0;
@@ -193,8 +185,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
 
   &:hover:not(:disabled),
