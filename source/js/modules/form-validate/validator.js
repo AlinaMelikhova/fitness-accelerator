@@ -1,7 +1,7 @@
 import {
   getLimitationsRegEx,
   getMatrixLimitationsRegEx,
-  getMailRegEx,
+  getMailRegEx
 } from './regular-expression';
 import {matrixReplace} from './matrix';
 import {Message} from './render-message';

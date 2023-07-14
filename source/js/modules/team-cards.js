@@ -1,4 +1,3 @@
-// const teamList = document.querySelector('.team__list');
 const breakpoint = window.matchMedia('(min-width:1200px)');
 
 export const handlerTeamMembers = () => {

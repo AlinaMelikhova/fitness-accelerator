@@ -1,4 +1,3 @@
-// import 'swiper/css/bundle';
 import Swiper from '../../vendor/swiper';
 
 const initTeamSwiper = () => {
@@ -7,7 +6,7 @@ const initTeamSwiper = () => {
     direction: 'horizontal',
     loop: true,
     slidesPerView: 1,
-    // centeredSlides: true,
+    autoHeight: true,
 
     navigation: {
       nextEl: '.swiper-button-next-team',

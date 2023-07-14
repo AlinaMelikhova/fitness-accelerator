@@ -1,4 +1,4 @@
-.swiper__button {
+.swiper-button {
   padding: 0;
   width: 56px;
   height: 56px;
@@ -12,43 +12,37 @@
     height: 30px;
   }
 
-  &--team {
+  &-prev::after,
+  &-next::after {
+    content: "";
+  }
+
+  &-prev-team {
     top: var(--swiper-navigation-top-offset, 55%);
-
-    &-prev {
-      left: 27px;
-      &::after {
-        content: "";
-      }
-
-      @include vp-1200 {
-        left: 25px;
-      }
-
-      @include vp-767 {
-        left: 5px;
-      }
-    }
-    &-next {
-      right: 27px;
-      &::after {
-        content: "";
-      }
-
-      @include vp-1200 {
-        right: 25px;
-      }
-
-      @include vp-767 {
-        right: 5px;
-      }
-    }
+    left: 27px;
 
     @include vp-1200 {
+      left: 25px;
       top: var(--swiper-navigation-top-offset, 52%);
     }
 
     @include vp-767 {
+      left: 5px;
+      top: var(--swiper-navigation-top-offset, 56%);
+    }
+  }
+
+  &-next-team {
+    top: var(--swiper-navigation-top-offset, 55%);
+    right: 27px;
+
+    @include vp-1200 {
+      right: 25px;
+      top: var(--swiper-navigation-top-offset, 52%);
+    }
+
+    @include vp-767 {
+      right: 5px;
       top: var(--swiper-navigation-top-offset, 56%);
     }
   }
@@ -58,6 +52,7 @@
 
     &-prev {
       left: 325px;
+
       &::after {
         content: "";
       }
@@ -73,6 +68,7 @@
 
     &-next {
       right: 325px;
+
       &::after {
         content: "";
       }
@@ -136,7 +132,7 @@
   }
 }
 
-.swiper__button-icon {
+.swiper-button__icon {
   width: 16px;
   height: 32px;
   stroke: rgba(175, 175, 175, 1);
