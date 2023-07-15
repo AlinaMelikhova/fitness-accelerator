@@ -1381,6 +1381,16 @@ button,
 .swiper-button--reviews {
   top: var(--swiper-navigation-top-offset, 58%);
 }
+@media (max-width: 1199px) {
+  .swiper-button--reviews {
+    top: var(--swiper-navigation-top-offset, 57%);
+  }
+}
+@media (max-width: 767px) {
+  .swiper-button--reviews {
+    top: var(--swiper-navigation-top-offset, 58%);
+  }
+}
 .swiper-button--reviews-prev {
   left: 325px;
 }
@@ -1411,16 +1421,6 @@ button,
 @media (max-width: 767px) {
   .swiper-button--reviews-next {
     right: 4px;
-  }
-}
-@media (max-width: 1199px) {
-  .swiper-button--reviews {
-    top: var(--swiper-navigation-top-offset, 57%);
-  }
-}
-@media (max-width: 767px) {
-  .swiper-button--reviews {
-    top: var(--swiper-navigation-top-offset, 58%);
   }
 }
 .swiper-button:hover:not(:disabled), .swiper-button:focus:not(:disabled), .swiper-button:focus-within:not(:disabled) {

@@ -18,7 +18,5 @@ export const handlerTeamMembers = () => {
         });
       }
     );
-  } else {
-    return;
   }
 };

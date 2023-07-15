@@ -50,44 +50,44 @@
   &--reviews {
     top: var(--swiper-navigation-top-offset, 58%);
 
-    &-prev {
-      left: 325px;
-
-      &::after {
-        content: "";
-      }
-
-      @include vp-1200 {
-        left: 25px;
-      }
-
-      @include vp-767 {
-        left: 4px;
-      }
-    }
-
-    &-next {
-      right: 325px;
-
-      &::after {
-        content: "";
-      }
-
-      @include vp-1200 {
-        right: 25px;
-      }
-
-      @include vp-767 {
-        right: 4px;
-      }
-    }
-
     @include vp-1200 {
       top: var(--swiper-navigation-top-offset, 57%);
     }
 
     @include vp-767 {
       top: var(--swiper-navigation-top-offset, 58%);
+    }
+  }
+
+  &--reviews-prev {
+    left: 325px;
+
+    &::after {
+      content: "";
+    }
+
+    @include vp-1200 {
+      left: 25px;
+    }
+
+    @include vp-767 {
+      left: 4px;
+    }
+  }
+
+  &--reviews-next {
+    right: 325px;
+
+    &::after {
+      content: "";
+    }
+
+    @include vp-1200 {
+      right: 25px;
+    }
+
+    @include vp-767 {
+      right: 4px;
     }
   }
 
