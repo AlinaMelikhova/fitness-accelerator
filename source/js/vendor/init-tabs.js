@@ -4,8 +4,8 @@ let tabs;
 
 const initTabs = () => {
   tabs = new Tabs();
-  const tabsParent = document.querySelectorAll('[data-tabs="parent"]');
-  Array.from(tabsParent).forEach((tab) => {
+  const tabsParents = document.querySelectorAll('[data-tabs="parent"]');
+  Array.from(tabsParents).forEach((tab) => {
     const buttons = tab.querySelectorAll('[data-tabs="control"]');
     const contents = tab.querySelectorAll('[data-tabs="element"]');
     const lengthDiff = buttons.length - contents.length;
