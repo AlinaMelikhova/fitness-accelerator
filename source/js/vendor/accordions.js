@@ -9,8 +9,8 @@ export class Accordions {
 
   _init() {
     this.fullUpdate();
-    document.addEventListener('click', this._documentClickHandler);
-    window.addEventListener('resize', this._windowResizeHandler);
+    document.addEventListener("click", this._documentClickHandler);
+    window.addEventListener("resize", this._windowResizeHandler);
   }
 
   _documentClickHandler(evt) {
@@ -30,7 +30,7 @@ export class Accordions {
     }
 
     const element = target.closest('[data-accordion="element"]');
-    if (element.classList.contains('is-active')) {
+    if (element.classList.contains("is-active")) {
       this.closeAccordion(element);
       return;
     }
@@ -58,7 +58,7 @@ export class Accordions {
   updateAccordionsHeight(element = null) {
     if (element) {
       const content = element.querySelector('[data-accordion="content"]');
-      content.style.transition = 'none';
+      content.style.transition = "none";
       content.style.maxHeight = `${content.scrollHeight}px`;
       setTimeout(() => {
         content.style.transition = null;
@@ -77,15 +77,15 @@ export class Accordions {
         parent.dataset.destroy &&
         !window.matchMedia(parent.dataset.destroy).matches
       ) {
-        content.style.maxHeight = '100%';
+        content.style.maxHeight = "100%";
         return;
       }
-      content.style.maxHeight = null;
     });
 
     const openElements = document.querySelectorAll(
       '[data-accordion="element"].is-active'
     );
+
     openElements.forEach((openElement) => {
       const content = openElement.querySelector('[data-accordion="content"]');
       const parent = openElement.closest('[data-accordion="parent"]');
@@ -93,10 +93,10 @@ export class Accordions {
         parent.dataset.destroy &&
         !window.matchMedia(parent.dataset.destroy).matches
       ) {
-        content.style.maxHeight = '100%';
+        content.style.maxHeight = "100%";
         return;
       }
-      content.style.transition = 'none';
+      content.style.transition = "none";
       content.style.maxHeight = `${content.scrollHeight}px`;
       setTimeout(() => {
         content.style.transition = null;
@@ -132,15 +132,15 @@ export class Accordions {
     const contentElement = element.querySelector('[data-accordion="content"]');
     this._openHeight += contentElement.scrollHeight;
 
-    if (parentElement.hasAttribute('data-single')) {
+    if (parentElement.hasAttribute("data-single")) {
       this.closeAllAccordion(parentElement);
     }
 
-    element.classList.add('is-active');
+    element.classList.add("is-active");
     if (transition) {
       contentElement.style.maxHeight = `${this._openHeight}px`;
     } else {
-      contentElement.style.transition = 'none';
+      contentElement.style.transition = "none";
       contentElement.style.maxHeight = `${this._openHeight}px`;
       setTimeout(() => {
         contentElement.style.transition = null;
@@ -163,12 +163,12 @@ export class Accordions {
     if (!contentElement) {
       return;
     }
-    element.classList.remove('is-active');
+    element.classList.remove("is-active");
     if (transition) {
-      contentElement.style.maxHeight = '0';
+      contentElement.style.maxHeight = "0";
     } else {
-      contentElement.style.transition = 'none';
-      contentElement.style.maxHeight = '0';
+      contentElement.style.transition = "none";
+      contentElement.style.maxHeight = "0";
       setTimeout(() => {
         contentElement.style.transition = null;
       });

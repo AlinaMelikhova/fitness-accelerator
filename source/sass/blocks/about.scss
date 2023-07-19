@@ -3,6 +3,7 @@
   padding-top: 120px;
   padding-bottom: 235px;
   display: flex;
+  max-width: 1366px;
 
   @include vp-1200 {
     padding-top: 105px;

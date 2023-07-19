@@ -41,6 +41,8 @@
 .promo__list-container {
   display: flex;
   justify-content: space-between;
+  max-width: 1366px;
+  margin: 0 auto;
 
   @include vp-1200 {
     flex-direction: column;
@@ -158,6 +160,7 @@
 
   @include vp-767 {
     text-align: center;
+    align-self: center;
   }
 
   &:focus:not(:disabled) {
@@ -264,7 +267,7 @@
     padding: 29px 25px 36px;
   }
 
-  h4 {
+  h3 {
     padding: 0;
     margin: 0;
     color: #1c3374;

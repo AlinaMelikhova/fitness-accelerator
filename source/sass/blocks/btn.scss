@@ -28,6 +28,9 @@
 
 .button-dark-background {
   cursor: pointer;
+  display: block;
+  box-sizing: border-box;
+  text-decoration: none;
   user-select: none;
   margin: 0;
   background-color: $color-transparent;
@@ -41,25 +44,28 @@
   text-transform: uppercase;
   text-align: center;
 
-  &:hover:not(:disabled),
-  &:focus:not(:disabled) {
+  &:hover,
+  &:focus {
     outline: none;
     color: $color-secondary;
     background-color: $color-default-white;
   }
 
-  &:active:not(:disabled) {
+  &:active {
     color: $color-primary;
     background-color: $color-default-white;
   }
 
-  &:disabled {
+  &--disabled {
     opacity: 0.5;
   }
 }
 
 .button-light-background {
   cursor: pointer;
+  display: block;
+  box-sizing: border-box;
+  text-decoration: none;
   user-select: none;
   margin: 0;
   background-color: $color-transparent;
@@ -74,19 +80,19 @@
   text-transform: uppercase;
   text-align: center;
 
-  &:hover:not(:disabled),
-  &:focus:not(:disabled) {
+  &:hover,
+  &:focus {
     outline: none;
     color: $color-default-white;
     background: $gradient-primary;
   }
 
-  &:active:not(:disabled) {
+  &:active {
     color: rgba(255, 255, 255, 0.3);
     background: $gradient-primary;
   }
 
-  &:disabled {
+  &--disabled {
     opacity: 0.3;
   }
 }

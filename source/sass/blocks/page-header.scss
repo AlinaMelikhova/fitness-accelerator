@@ -19,7 +19,16 @@
 
   @include vp-767 {
     padding-top: 15px;
-    padding-bottom: 81px;
+    padding-bottom: 79px;
+  }
+}
+
+.page-header__wrapper {
+  max-width: 1366px;
+  margin: 0 auto;
+
+  @include vp-767 {
+    margin: 0;
   }
 }
 
@@ -167,7 +176,8 @@
   }
 
   @include vp-767 {
-    margin-bottom: 22px;
+    margin-bottom: 24px;
+    letter-spacing: 4.6px;
   }
 }
 
@@ -198,8 +208,8 @@
   }
 
   @include vp-767 {
-    bottom: 52px;
-    left: -110px;
+    bottom: 54px;
+    left: -105px;
   }
 }
 
