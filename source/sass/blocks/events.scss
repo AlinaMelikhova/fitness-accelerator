@@ -187,12 +187,19 @@
 }
 
 .events__image {
+  min-width: 660px;
+  max-width: 660px;
+  height: 500px;
+
   @include vp-1200 {
-    width: 386px;
+    min-width: 386px;
+    max-width: 386px;
     height: 292px;
   }
 
   @include vp-767 {
     width: 100%;
+    min-width: auto;
+    max-width: auto;
   }
 }

@@ -115,6 +115,7 @@
 .about__multimedia-container {
   position: relative;
   margin-left: 85px;
+  height: max-content;
 
   @include vp-1200 {
     margin-left: 0;

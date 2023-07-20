@@ -232,8 +232,13 @@
 }
 
 .page-header__image {
+  min-width: 500px;
+  max-width: 500px;
+  height: 560px;
+
   @include vp-1200 {
-    width: 324px;
+    min-width: 324px;
+    max-width: 324px;
     height: 390px;
   }
 }
