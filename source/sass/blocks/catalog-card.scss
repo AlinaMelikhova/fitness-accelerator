@@ -81,33 +81,37 @@
     font-weight: 700;
     line-height: 100%;
     margin-right: 14px;
-    z-index: 1;
+    z-index: 10;
 
     @include vp-767 {
       font-size: 48px;
       margin-right: 10px;
     }
-  }
 
-  b {
-    padding: 0;
-    margin: 0;
-    position: absolute;
-    top: -44px;
-    left: -19px;
-    color: #e8e8e8;
-    font-size: 100px;
-    font-family: $font-family-secondary;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 100%;
-    opacity: 0.5;
-    z-index: 0;
+    &::after {
+      content: attr(title);
+      width: 100px;
+      height: 100px;
+      display: block;
+      padding: 0;
+      margin: 0;
+      position: absolute;
+      top: -44px;
+      left: -19px;
+      color: #e8e8e8;
+      font-size: 100px;
+      font-family: $font-family-secondary;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 100%;
+      opacity: 0.5;
+      z-index: -1;
 
-    @include vp-767 {
-      top: -34px;
-      left: -12px;
-      font-size: 80px;
+      @include vp-767 {
+        top: -34px;
+        left: -12px;
+        font-size: 80px;
+      }
     }
   }
 
@@ -116,6 +120,7 @@
     fill: $color-primary;
     position: relative;
     top: -8px;
+    z-index: 10;
 
     @include vp-767 {
       width: 28px;
