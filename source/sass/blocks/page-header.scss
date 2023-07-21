@@ -1,34 +1,34 @@
 .page-header__container {
   background: conic-gradient(
-    from 139.4deg at 20.7% 35.74%,
+    from 137deg at 16% 38.74%,
     #b80027 -46.69deg,
     #003d85 32.24deg,
     #b80027 313.31deg,
     #003d85 392.24deg
   );
   background-color: #b80027;
-  padding-top: 40px;
-  padding-bottom: 51px;
+  padding: 40px 0 51px;
   display: flex;
   flex-direction: column;
 
   @include vp-1200 {
-    padding-top: 40px;
-    padding-bottom: 82px;
+    padding: 40px 45px 82px;
   }
 
   @include vp-767 {
-    padding-top: 15px;
-    padding-bottom: 79px;
+    padding: 15px 15px 79px;
   }
 }
 
 .page-header__wrapper {
+  width: 100%;
   max-width: 1366px;
   margin: 0 auto;
+  padding: 0 103px;
 
   @include vp-767 {
     margin: 0;
+    padding: 0;
   }
 }
 
@@ -63,6 +63,8 @@
   font-weight: 600;
   letter-spacing: 0.78px;
   line-height: 35%;
+  position: relative;
+  z-index: 1;
 
   @include vp-1200 {
     margin-top: -3px;
@@ -82,11 +84,10 @@
 
 .page-header__information {
   display: flex;
-  padding-right: 200px;
-  margin: 0 auto;
 
   @include vp-1200 {
     padding-right: 0;
+    margin: 0 auto;
   }
 
   @include vp-767 {
@@ -234,7 +235,7 @@
 .page-header__image {
   min-width: 500px;
   max-width: 500px;
-  height: 560px;
+  height: 557px;
 
   @include vp-1200 {
     min-width: 324px;

@@ -139,9 +139,11 @@ export class Accordions {
     element.classList.add("is-active");
     if (transition) {
       contentElement.style.maxHeight = `${this._openHeight}px`;
+      contentElement.style.marginBottom = `8px`;
     } else {
       contentElement.style.transition = "none";
       contentElement.style.maxHeight = `${this._openHeight}px`;
+      contentElement.style.marginBottom = `8px`;
       setTimeout(() => {
         contentElement.style.transition = null;
       });
@@ -166,9 +168,11 @@ export class Accordions {
     element.classList.remove("is-active");
     if (transition) {
       contentElement.style.maxHeight = "0";
+      contentElement.style.marginBottom = "0";
     } else {
       contentElement.style.transition = "none";
       contentElement.style.maxHeight = "0";
+      contentElement.style.marginBottom = "0";
       setTimeout(() => {
         contentElement.style.transition = null;
       });

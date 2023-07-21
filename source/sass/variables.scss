@@ -25,6 +25,12 @@ $gradient-primary: linear-gradient(
   $color-neon-blue 100%
 );
 
+$gradient-secondary: linear-gradient(
+  108deg,
+  $color-torch-red 15%,
+  $color-neon-blue 100%
+);
+
 $black-to-right: linear-gradient(
   90deg,
   rgba(0, 0, 0, 0.75) 0%,
