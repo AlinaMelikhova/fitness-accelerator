@@ -64,6 +64,7 @@
 
   label {
     width: 46%;
+    position: relative;
 
     @include vp-1200 {
       width: 44%;
@@ -100,25 +101,32 @@
     &:active:not(:disabled) {
       border: none;
       padding-bottom: 4px;
+      padding-left: 13px;
       outline: none;
     }
 
-
-    &:focus:not(:disabled)::before {
-      content: "";
-      position: absolute;
-      display: block;
-      width: calc(100% + 31px);
-      height: calc(100% + 16px);
-      border: 1px solid $color-default-white;
-      top: -8px;
-      left: -10px;
-      background-color: $color-transparent;
+    &:focus:not(:disabled)::placeholder,
+    &:active:not(:disabled)::placeholder {
+      color: $color-transparent;
     }
 
     &:disabled {
       opacity: 0.3;
       cursor: auto;
+    }
+
+
+    &:focus:not(:disabled) + span::before,
+    &:active:not(:disabled) + span::before{
+      content: "";
+      position: absolute;
+      display: block;
+      width: calc(100% + 5px);
+      height: calc(100% + 10px);
+      border: 1px solid #fff;
+      top: -9px;
+      left: -2px;
+      background-color: $color-transparent;
     }
   }
 

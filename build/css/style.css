@@ -4329,6 +4329,7 @@ button,
 }
 .trial__form-input-container label {
   width: 46%;
+  position: relative;
 }
 @media (max-width: 1199px) {
   .trial__form-input-container label {
@@ -4382,22 +4383,38 @@ button,
 .trial__form-input-container input:focus:not(:disabled), .trial__form-input-container input:active:not(:disabled) {
   border: none;
   padding-bottom: 4px;
+  padding-left: 13px;
   outline: none;
 }
-.trial__form-input-container input:focus:not(:disabled)::before {
-  content: "";
-  position: absolute;
-  display: block;
-  width: calc(100% + 31px);
-  height: calc(100% + 16px);
-  border: 1px solid #ffffff;
-  top: -8px;
-  left: -10px;
-  background-color: rgba(255, 255, 255, 0);
+.trial__form-input-container input:focus:not(:disabled)::-webkit-input-placeholder, .trial__form-input-container input:active:not(:disabled)::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0);
+}
+.trial__form-input-container input:focus:not(:disabled)::-moz-placeholder, .trial__form-input-container input:active:not(:disabled)::-moz-placeholder {
+  color: rgba(255, 255, 255, 0);
+}
+.trial__form-input-container input:focus:not(:disabled):-ms-input-placeholder, .trial__form-input-container input:active:not(:disabled):-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0);
+}
+.trial__form-input-container input:focus:not(:disabled)::-ms-input-placeholder, .trial__form-input-container input:active:not(:disabled)::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0);
+}
+.trial__form-input-container input:focus:not(:disabled)::placeholder, .trial__form-input-container input:active:not(:disabled)::placeholder {
+  color: rgba(255, 255, 255, 0);
 }
 .trial__form-input-container input:disabled {
   opacity: 0.3;
   cursor: auto;
+}
+.trial__form-input-container input:focus:not(:disabled) + span::before, .trial__form-input-container input:active:not(:disabled) + span::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: calc(100% + 5px);
+  height: calc(100% + 10px);
+  border: 1px solid #fff;
+  top: -9px;
+  left: -2px;
+  background-color: rgba(255, 255, 255, 0);
 }
 .trial__form-input-container span {
   color: #ff121f;

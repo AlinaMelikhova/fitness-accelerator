@@ -111,11 +111,6 @@ export class Form {
     form.addEventListener('reset', (event) => {
       this.reset(event.target);
     });
-
-    // form.addEventListener('click', (event) => {
-    //   event.target.value = '    ';
-    //   console.log('hi alina');
-    // });
   }
 
   init() {
