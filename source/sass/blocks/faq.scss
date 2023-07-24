@@ -1,7 +1,7 @@
 .faq__container {
   background-color: $color-section;
   padding-top: 110px;
-  padding-bottom: 117px;
+  padding-bottom: 120px;
 
   @include vp-1200 {
     padding-top: 100px;
@@ -62,7 +62,7 @@
   @include vp-767 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 9px 8px;
+    gap: 10px 8px;
     margin: 0 0 30px;
   }
 }
@@ -109,9 +109,13 @@
     padding: 13px;
   }
 
+  &:active {
+    color: $color-default-white;
+  }
+
   &.is-active {
     color: $color-default-white;
-    background: $gradient-primary;
+    background: $gradient-secondary;
   }
 }
 

@@ -23,6 +23,8 @@
 
     @include vp-1200 {
       margin-bottom: 29px;
+      letter-spacing: 1.8px;
+      margin-left: -5px;
       text-align: center;
     }
 
@@ -47,10 +49,8 @@
 
 .team__item-container {
   position: relative;
-  min-width: 260px;
-  max-width: 260px;
-  min-height: 294px;
-  max-height: 294px;
+  min-width: auto;
+  width: auto;
   overflow: hidden;
 
   &:hover .team__item-hover-container,
@@ -66,6 +66,7 @@
   @include vp-1200 {
     min-width: 269px;
     max-width: 269px;
+    max-height: 294px;
     cursor: pointer;
 
     &:hover .team__item-hover-container,
@@ -113,7 +114,7 @@
 .team__item-name {
   position: absolute;
   width: 100%;
-  bottom: 23px;
+  top: 83%;
   left: 0;
   text-align: center;
   color: $color-default-white;
@@ -123,22 +124,27 @@
   line-height: 150%;
 
   @include vp-1200 {
-    bottom: 31px;
+    bottom: 23px;
+    left: 4px;
+    top: auto;
   }
 }
 
 .team__item-hover-container {
   display: none;
   position: absolute;
-  min-height: 294px;
-  max-height: 294px;
+  height: 100%;
   max-width: 260px;
   top: 0;
   left: 0;
   background-color: rgba(16, 38, 84, 0.89);
   color: $color-default-white;
-  padding: 54px 46px 54px 54px;
+  padding-top: 54px;
+  padding-bottom: 30px;
+  padding-right: 18%;
+  padding-left: 20%;
   text-align: center;
+  overflow-y: scroll;
 
   @include vp-1200 {
     padding: 54px;
@@ -160,6 +166,7 @@
   font-family: $font-family-secondary;
   font-weight: 700;
   line-height: 100%;
+  letter-spacing: 0.2px;
 }
 
 .team__item-occupation {
@@ -179,7 +186,7 @@
   margin: 0;
   margin-top: auto;
   padding: 0;
-  padding-left: 16px;
+  padding-left: 17px;
 }
 
 .team__item-achievement-item {

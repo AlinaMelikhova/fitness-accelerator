@@ -22,7 +22,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 60px 163px 70px 133px;
+    padding: 60px 163px 69px 133px;
     min-height: auto;
     margin-left: 0;
   }
@@ -36,6 +36,7 @@
     padding: 0;
     margin: 0;
     margin-bottom: 17px;
+    white-space: nowrap;
 
     @include vp-1200 {
       margin-bottom: 32px;
@@ -44,6 +45,7 @@
 
     @include vp-767 {
       margin-bottom: 30px;
+      letter-spacing: 1.3px;
     }
   }
 }
@@ -53,7 +55,7 @@
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  margin-bottom: 29px;
+  margin-bottom: 30px;
 
   @include vp-767 {
     margin-bottom: 6px;
@@ -69,7 +71,7 @@
 
     @include vp-767 {
       width: 100%;
-      margin-bottom: 32px;
+      margin-bottom: 34px;
     }
   }
 
@@ -83,6 +85,12 @@
     padding: 0;
     margin: 0;
     padding-bottom: 3px;
+    position: relative;
+
+    &::placeholder {
+      opacity: 1;
+      color: $color-default-white;
+    }
 
     &:hover:not(:disabled) {
       border-bottom: 1px solid $color-default-white;
@@ -90,10 +98,22 @@
 
     &:focus:not(:disabled),
     &:active:not(:disabled) {
-      box-shadow: 0 0 0 1px $color-default-white inset;
       border: none;
       padding-bottom: 4px;
       outline: none;
+    }
+
+
+    &:focus:not(:disabled)::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: calc(100% + 31px);
+      height: calc(100% + 16px);
+      border: 1px solid $color-default-white;
+      top: -8px;
+      left: -10px;
+      background-color: $color-transparent;
     }
 
     &:disabled {

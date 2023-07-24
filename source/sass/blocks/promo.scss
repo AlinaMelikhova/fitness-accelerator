@@ -1,6 +1,6 @@
 .promo__container {
   padding-top: 166px;
-  padding-bottom: 120px;
+  padding-bottom: 80px;
   background-color: $color-default-white;
 
   @include vp-1200 {
@@ -25,9 +25,9 @@
     text-align: center;
 
     @include vp-1200 {
+      margin-bottom: 53px;
       font-size: 42px;
       letter-spacing: 2px;
-      margin-bottom: 53px;
       margin-left: -7px;
     }
 
@@ -44,6 +44,7 @@
   justify-content: space-between;
   max-width: 1366px;
   margin: 0 auto;
+  flex-wrap: wrap;
 
   @include vp-1200 {
     flex-direction: column;
@@ -53,8 +54,9 @@
 .promo__card {
   display: flex;
   background-color: $color-torch-red;
-  width: 48%;
+  width: 48.3%;
   flex-grow: 0;
+  margin-bottom: 40px;
 
   @include vp-1200 {
     width: 100%;
@@ -108,10 +110,12 @@
     font-weight: 700;
     line-height: 110%;
     margin-bottom: 14px;
+    letter-spacing: 1px;
 
     @include vp-1200 {
       line-height: 80%;
       margin-bottom: 26px;
+      letter-spacing: 0;
     }
 
     @include vp-767 {
@@ -143,6 +147,7 @@
 }
 
 .promo__card-button {
+  position: relative;
   margin: 0;
   margin-top: 20px;
   padding: 0;
@@ -151,13 +156,15 @@
   border: none;
   border-bottom: 1px solid $color-default-white;
   color: $color-default-white;
-  font-size: 14px;
+  font-size: 13px;
   font-family: $font-family-secondary;
   font-weight: 700;
   text-transform: uppercase;
   cursor: pointer;
   text-align: left;
   align-self: self-start;
+  line-height: 130%;
+  letter-spacing: 1.2px;
 
   @include vp-767 {
     text-align: center;
@@ -167,22 +174,35 @@
   }
 
   &:focus:not(:disabled) {
-    padding: 10px;
-    margin: -10px;
     border: none;
-    outline: 1px solid $color-default-white;
+    outline: none;
+    margin-bottom: 1px;
+  }
+
+  &:focus:not(:disabled)::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: calc(100% + 31px);
+    height: calc(100% + 16px);
+    border: 1px solid $color-default-white;
+    top: -8px;
+    left: -10px;
+    background-color: $color-transparent;
   }
 
   &--on-light-bg {
     color: $color-primary;
     border-bottom: 1px solid $color-primary;
+    line-height: 110%;
+    letter-spacing: 0;
 
     @include vp-1200 {
       font-size: 12px;
     }
 
-    &:focus:not(:disabled) {
-      outline: 1px solid $color-primary;
+    &:focus:not(:disabled)::before {
+      border: 1px solid $color-primary;
     }
   }
 
@@ -230,7 +250,7 @@
   padding: 0;
   margin: 0;
   list-style-type: none;
-  width: 48%;
+  width: 48.3%;
 
   @include vp-1200 {
     width: 100%;
@@ -247,7 +267,7 @@
 .promo__item {
   display: flex;
   flex-direction: column;
-  padding: 18px 24px 26px;
+  padding: 18px 28px 28px;
   border: 7px solid;
   border-image: $gradient-primary;
   border-image-slice: 1;
@@ -272,6 +292,7 @@
   h3 {
     padding: 0;
     margin: 0;
+    margin-bottom: 2px;
     color: #1c3374;
     font-size: 26px;
     font-family: $font-family-secondary;

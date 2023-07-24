@@ -139,11 +139,11 @@ export class Accordions {
     element.classList.add("is-active");
     if (transition) {
       contentElement.style.maxHeight = `${this._openHeight}px`;
-      contentElement.style.marginBottom = `8px`;
+      contentElement.style.marginBottom = `9px`;
     } else {
       contentElement.style.transition = "none";
       contentElement.style.maxHeight = `${this._openHeight}px`;
-      contentElement.style.marginBottom = `8px`;
+      contentElement.style.marginBottom = `9px`;
       setTimeout(() => {
         contentElement.style.transition = null;
       });

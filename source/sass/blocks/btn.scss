@@ -84,12 +84,12 @@
   &:focus {
     outline: none;
     color: $color-default-white;
-    background: $gradient-primary;
+    background: $gradient-secondary;
   }
 
   &:active {
     color: rgba(255, 255, 255, 0.3);
-    background: $gradient-primary;
+    background: $gradient-secondary;
   }
 
   &--disabled {

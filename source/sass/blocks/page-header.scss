@@ -26,7 +26,7 @@
   margin: 0 auto;
   padding: 0 103px;
 
-  @include vp-767 {
+  @include vp-1200 {
     margin: 0;
     padding: 0;
   }
@@ -35,6 +35,16 @@
 .page-header__contacts {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: -20px;
+
+  @include vp-1200 {
+    margin-bottom: -15px;
+  }
+
+  @include vp-767 {
+    margin-bottom: -20px;
+  }
 }
 
 .page-header__logo:focus,
@@ -42,6 +52,15 @@
 .page-header__tel:focus-visible {
   outline: none;
   outline-offset: 0;
+}
+
+.page-header__logo {
+  margin-right: 40px;
+  margin-bottom: 20px;
+
+  @include vp-1200 {
+    margin-right: 20px;
+  }
 }
 
 .page-header__logo-icon {
@@ -62,9 +81,10 @@
   font-family: $font-family-primary;
   font-weight: 600;
   letter-spacing: 0.78px;
-  line-height: 35%;
+  line-height: 100%;
   position: relative;
   z-index: 1;
+  margin-top: -8px;
 
   @include vp-1200 {
     margin-top: -3px;

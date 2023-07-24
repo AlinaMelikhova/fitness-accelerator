@@ -1,8 +1,8 @@
 .subscription__container {
-  // position: relative;
   background-color: $color-section;
   padding-top: 112px;
   padding-bottom: 120px;
+  padding: 112px 0 119px;
   z-index: 1;
 
   @include vp-1200 {
@@ -28,7 +28,8 @@
     }
 
     @include vp-767 {
-      margin-left: 0;
+      margin-left: -13px;
+      letter-spacing: 1.3px;
     }
   }
 }
