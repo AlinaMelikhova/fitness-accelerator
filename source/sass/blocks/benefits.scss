@@ -174,14 +174,12 @@
   span {
     color: $color-primary;
     font-size: 16px;
-    font-family: $font-family-secondary;
+    font-family: "Roboto Condenced Light", "Arial", sans-serif;
     font-weight: 300;
     line-height: 140%;
-    letter-spacing: -0.3px;
 
     @include vp-767 {
       text-align: center;
-      letter-spacing: 0;
     }
   }
 }
