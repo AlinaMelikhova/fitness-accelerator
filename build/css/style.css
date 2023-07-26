@@ -1650,7 +1650,7 @@ button,
 @media (max-width: 1199px) {
   .page-header__description-container {
     margin-right: 30px;
-    margin-left: 139px;
+    margin-left: 133px;
     padding-top: 77px;
   }
 }
@@ -1721,16 +1721,19 @@ button,
 }
 @media (max-width: 1199px) {
   .page-header__description-heading {
-    margin-bottom: 36px;
-    font-size: 72px;
-    letter-spacing: 3.6px;
+    margin-bottom: 38px;
+    font-size: 74px;
+    letter-spacing: 3px;
     text-transform: none;
+    line-height: 116%;
   }
 }
 @media (max-width: 767px) {
   .page-header__description-heading {
-    margin-bottom: 24px;
-    letter-spacing: 4.6px;
+    line-height: 119%;
+    font-size: 74px;
+    margin-bottom: 21px;
+    letter-spacing: 2.5px;
   }
 }
 
@@ -1760,13 +1763,13 @@ button,
 @media (max-width: 1199px) {
   .page-header__description-heading-list {
     bottom: 57px;
-    left: -145px;
+    left: -132px;
   }
 }
 @media (max-width: 767px) {
   .page-header__description-heading-list {
     bottom: 54px;
-    left: -105px;
+    left: -102px;
   }
 }
 
