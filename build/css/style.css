@@ -3393,6 +3393,9 @@ button,
       -ms-flex-positive: 0;
           flex-grow: 0;
   margin-bottom: 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100%;
 }
 @media (max-width: 1199px) {
   .promo__card {
