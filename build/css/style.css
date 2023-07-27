@@ -378,6 +378,13 @@ template {
   font-display: swap;
 }
 @font-face {
+  font-family: "Roboto Condenced Bold";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/roboto-condensed-bold.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
   font-family: "Roboto Condenced Light";
   font-style: normal;
   font-weight: 300;
@@ -708,8 +715,6 @@ button,
 }
 .button-light-background:hover, .button-light-background:focus {
   outline: none;
-  color: #ffffff;
-  background: linear-gradient(108deg, #ed0233 15%, #003eb7 100%);
 }
 .button-light-background:active {
   color: rgba(255, 255, 255, 0.3);
@@ -1730,10 +1735,10 @@ button,
 }
 @media (max-width: 767px) {
   .page-header__description-heading {
-    line-height: 119%;
-    font-size: 74px;
-    margin-bottom: 21px;
-    letter-spacing: 2.5px;
+    line-height: 112%;
+    font-size: 78px;
+    margin-bottom: 23px;
+    letter-spacing: 1px;
   }
 }
 
@@ -2392,6 +2397,9 @@ button,
   color: #ffffff;
   background: linear-gradient(108deg, #ed0233 15%, #003eb7 100%);
 }
+.catalog-card__container:hover .catalog-card__button:not(:disabled):active, .catalog-card__container:focus .catalog-card__button:not(:disabled):active {
+  color: rgba(255, 255, 255, 0.3);
+}
 .catalog-card__container h4 {
   padding: 0;
   margin: 0;
@@ -2494,6 +2502,17 @@ button,
 
 .catalog-card__button {
   padding: 26px 43px;
+}
+.catalog-card__button:not(:disabled):hover, .catalog-card__button:not(:disabled):focus {
+  outline: none;
+  color: #ffffff;
+  background: linear-gradient(108deg, #ed0233 15%, #003eb7 100%);
+}
+.catalog-card__button:active {
+  color: rgba(255, 255, 255, 0.3);
+  border: none;
+  outline: none;
+  background: linear-gradient(108deg, #ed0233 15%, #003eb7 100%);
 }
 
 .events__container {
@@ -3374,11 +3393,13 @@ button,
           justify-content: space-between;
   max-width: 1366px;
   margin: 0 auto;
+  row-gap: 40px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 @media (max-width: 1199px) {
   .promo__list-container {
+    row-gap: 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -3395,15 +3416,13 @@ button,
   -webkit-box-flex: 0;
       -ms-flex-positive: 0;
           flex-grow: 0;
-  margin-bottom: 40px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  height: 100%;
+  height: auto;
 }
 @media (max-width: 1199px) {
   .promo__card {
     width: 100%;
-    height: auto;
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
@@ -3519,7 +3538,7 @@ button,
   border-bottom: 1px solid #ffffff;
   color: #ffffff;
   font-size: 13px;
-  font-family: "Roboto Condenced", "Arial", sans-serif;
+  font-family: "Roboto Condenced Bold", "Arial", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   cursor: pointer;
@@ -3549,7 +3568,7 @@ button,
   content: "";
   position: absolute;
   display: block;
-  width: calc(100% + 31px);
+  width: calc(100% + 20px);
   height: calc(100% + 16px);
   border: 1px solid #ffffff;
   top: -8px;
@@ -3599,6 +3618,9 @@ button,
   }
 }
 
+.promo__image {
+  height: 100%;
+}
 @media (max-width: 1199px) {
   .promo__image {
     min-width: 399px;
@@ -3860,12 +3882,21 @@ button,
     padding: 13px;
   }
 }
+.faq__tabs-button:not(:disabled):hover, .faq__tabs-button:not(:disabled):focus {
+  background-color: rgba(255, 255, 255, 0);
+  -webkit-box-shadow: 0 0 0 1px #102654 inset;
+          box-shadow: 0 0 0 1px #102654 inset;
+}
 .faq__tabs-button:active {
   color: #ffffff;
 }
 .faq__tabs-button.is-active {
   color: #ffffff;
   background: linear-gradient(108deg, #ed0233 15%, #003eb7 100%);
+}
+.faq__tabs-button:hover.is-active, .faq__tabs-button:focus.is-active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .faq__tabs-wrapper {
@@ -4426,7 +4457,7 @@ button,
   position: absolute;
   display: block;
   width: calc(100% + 5px);
-  height: calc(100% + 10px);
+  height: 37px;
   border: 1px solid #fff;
   top: -9px;
   left: -2px;

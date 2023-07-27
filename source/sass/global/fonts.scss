@@ -23,6 +23,14 @@
 }
 
 @font-face {
+  font-family: "Roboto Condenced Bold";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/roboto-condensed-bold.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
   font-family: "Roboto Condenced Light";
   font-style: normal;
   font-weight: 300;

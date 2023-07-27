@@ -115,14 +115,13 @@
       cursor: auto;
     }
 
-
     &:focus:not(:disabled) + span::before,
-    &:active:not(:disabled) + span::before{
+    &:active:not(:disabled) + span::before {
       content: "";
       position: absolute;
       display: block;
       width: calc(100% + 5px);
-      height: calc(100% + 10px);
+      height: 37px;
       border: 1px solid #fff;
       top: -9px;
       left: -2px;

@@ -109,6 +109,12 @@
     padding: 13px;
   }
 
+  &:not(:disabled):hover,
+  &:not(:disabled):focus {
+    background-color: $color-transparent;
+    box-shadow: 0 0 0 1px $color-primary inset;
+  }
+
   &:active {
     color: $color-default-white;
   }
@@ -116,6 +122,11 @@
   &.is-active {
     color: $color-default-white;
     background: $gradient-secondary;
+  }
+
+  &:hover.is-active,
+  &:focus.is-active {
+    box-shadow: none;
   }
 }
 

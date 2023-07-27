@@ -34,6 +34,11 @@
     background: $gradient-secondary;
   }
 
+  &:hover .catalog-card__button:not(:disabled):active,
+  &:focus .catalog-card__button:not(:disabled):active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
   h4 {
     padding: 0;
     margin: 0;
@@ -131,4 +136,18 @@
 
 .catalog-card__button {
   padding: 26px 43px;
+
+  &:not(:disabled):hover,
+  &:not(:disabled):focus {
+    outline: none;
+    color: $color-default-white;
+    background: $gradient-secondary;
+  }
+
+  &:active {
+    color: rgba(255,255,255,.3);
+    border: none;
+    outline: none;
+    background: $gradient-secondary;
+  }
 }
