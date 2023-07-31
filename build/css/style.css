@@ -2755,8 +2755,8 @@ button,
 }
 
 .events__image {
-  min-width: 660px;
-  max-width: 660px;
+  -o-object-fit: contain;
+     object-fit: contain;
   height: 500px;
 }
 @media (max-width: 1199px) {
@@ -3559,12 +3559,12 @@ button,
     line-height: 140%;
   }
 }
-.promo__card-button:focus:not(:disabled) {
+.promo__card-button:focus-visible:not(:disabled) {
   border: none;
   outline: none;
   margin-bottom: 1px;
 }
-.promo__card-button:focus:not(:disabled)::before {
+.promo__card-button:focus-visible::before {
   content: "";
   position: absolute;
   display: block;
@@ -3591,6 +3591,9 @@ button,
 }
 .promo__card-button:hover:not(:disabled) {
   opacity: 0.8;
+}
+.promo__card-button:active:not(:disabled) {
+  opacity: 1;
 }
 .promo__card-button:disabled {
   opacity: 0.5;
@@ -3619,6 +3622,8 @@ button,
 }
 
 .promo__image {
+  -o-object-fit: cover;
+     object-fit: cover;
   height: 100%;
 }
 @media (max-width: 1199px) {

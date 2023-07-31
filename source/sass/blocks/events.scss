@@ -187,8 +187,7 @@
 }
 
 .events__image {
-  min-width: 660px;
-  max-width: 660px;
+  object-fit: contain;
   height: 500px;
 
   @include vp-1200 {

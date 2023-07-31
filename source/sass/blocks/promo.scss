@@ -175,13 +175,13 @@
     line-height: 140%;
   }
 
-  &:focus:not(:disabled) {
+  &:focus-visible:not(:disabled) {
     border: none;
     outline: none;
     margin-bottom: 1px;
   }
 
-  &:focus:not(:disabled)::before {
+  &:focus-visible::before {
     content: "";
     position: absolute;
     display: block;
@@ -212,6 +212,10 @@
     opacity: 0.8;
   }
 
+  &:active:not(:disabled) {
+    opacity: 1;
+  }
+
   &:disabled {
     opacity: 0.5;
     cursor: auto;
@@ -236,6 +240,7 @@
 }
 
 .promo__image {
+  object-fit: cover;
   height: 100%;
 
   @include vp-1200 {
